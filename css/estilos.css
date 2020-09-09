@@ -1,0 +1,322 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    background-color: #FFFFFE;
+    color: #464444;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    text-transform: ;
+}
+.menu{
+    height: inherit;
+}
+.header ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: inherit;
+}
+.header ol li{
+    height: inherit;
+}
+.logo{
+    margin:0;
+}
+.header a{
+    color: #464444;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.hero{
+    height: 390px;
+    /* background-image: url(../Images/Hero.jpg); */
+    background-color: #F7E9E3;
+    /* background-size: 600px 390px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
+    color: #464444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-sentence{
+    text-align: center;
+    /* padding: 100px 140px 30px 140px; */
+    font-family: lemonada, sans-serif;
+    line-height: 1.5em;
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: -.2px;
+    width: 510px;
+    margin: 0;
+}
+.hero-imageContainer{
+    margin: 0;
+}
+.hero-image{
+    object-fit: cover;
+}
+.aboutme{
+    background-color: #FFFFFE;
+    /* margin: 0px 140px 30px 140px; */
+    display: flex;
+    justify-content: space-between;
+}
+.profile{
+    width: 500px;
+}
+.profile h2{
+    color: #0E3150;
+}
+.profile p{
+    color: #464444;
+}
+.WhatIlovetodo h2{
+    color: #0E3150;
+    text-align: center;
+}
+.lovetodo{
+    display: flex;
+    text-align: center;
+    width: 600px;
+    height: 150px;
+      
+}
+.travel{
+    border: 1px solid #707070;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    /* box-sizing: border-box; */
+    background: #707070;
+    margin: 20px;
+    /* text-align: center; */
+    /* line-height: 100px; */
+    color: #FFFFFE;
+}
+.eat{
+    border: 1px solid #FFC0C2;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    /* box-sizing: border-box; */
+    background: #FFC0C2;
+    /* text-align: center; */
+    /* line-height: 100px; */
+    color: #FFFFFE;
+}
+.movies{
+    border: 1px solid #707070;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    /* box-sizing: border-box; */
+    background: #707070;
+    margin: 20px;
+    /* text-align: center; */
+    /* line-height: 100px; */
+    color: #FFFFFE;
+}
+.family{
+    border: 1px solid #FFC0C2;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    /* box-sizing: border-box; */
+    background: #FFC0C2;
+    margin: 20px;
+    /* text-align: center; */
+    /* line-height: 100px; */
+    color: #FFFFFE;
+}
+.experience-list-title{
+    background-color: #6DC9C8;
+    margin: 0;
+}
+.experience-list-title h2{
+    margin: 0;
+    padding: 20px 0 0;
+}
+.experience-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #6DC9C8;
+    padding: 20px 0;
+    
+}
+.experience{
+    margin: 10px;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #F7E9E3;
+    
+}
+.experience-imageContainer{
+    margin: 0;
+}
+.experience-image{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.experience-detail{
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.experience-button{
+    background-color: #0E3150 ;
+    color: white;
+    border: 1px solid #0E3150;
+    padding: 5px 20px;
+    border-radius: 5px;
+    width: 100px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    
+}
+.skills{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.skills p::after {
+    content: "|";
+    padding: 5px;
+}
+.contact h2{
+    color: #0E3150;
+}
+.form-and-social{
+    display: flex;
+    justify-content: space-between;
+}
+.social{
+    display: flex;
+    /* justify-content: space-between; */
+   align-self: baseline; 
+   /* padding: 40px 0px; */
+}
+.social-link{
+    width: 40px;
+    height: 40px;s
+    display: inline-block;
+    margin: 0 10px;
+}
+.social-link.gmail{
+    background-image: url('../images/gmail.svg');
+}
+.social-link.linkedin{
+    background-image: url('../images/linkedin.svg');
+}
+.social-link.twitter{
+    background-image: url('../images/twitter.svg');
+}
+.social-link.github{
+    background-image: url('../images/github.svg');
+    background-size: 40px 40px;
+}
+.social-link.cv{
+    background-color: #0E3150;
+    color: #FFFFFE;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 90px;
+    align-self: flex-start;
+}
+.form-email label{
+    width: 150px;
+    margin: 10px 0;
+}
+.name-container{
+    width: 400px;
+    margin: 0 0 0 50px;
+    height: 40px;
+    display: flex;
+}
+.email-container{
+    width: 400px;
+    margin: 0 0 0 50px;
+    height: 40px;
+    display: flex;
+}
+.message-container{
+    width: 400px;
+    margin: 0 0 0 50px;
+    height: 200px;
+    display: flex;
+}
+.message-container label{
+    width: 130px;
+}
+.input-name{
+    border-radius: 5px;
+    border: 1px solid #464444;
+    padding: 5px 50px;
+    margin: 5px;
+    float: right;    
+}
+.input-email{
+    border-radius: 5px;
+    border: 1px solid #464444;
+    padding: 5px 50px; 
+    margin: 5px;
+    float: right;    
+}
+.input-message{
+    border-radius: 5px;
+    border: 1px solid #464444;
+    width: 200px;
+    height: 200px;
+    padding: 5px 50px 5px 5px;
+    margin: 5px;
+    float: right;    
+}
+.form-email{
+    display: flex;
+    /* margin: 100px 0 10px 0px; */
+    justify-content: flex-start;
+    align-content: space-between;
+}
+.contact-button{
+    background: #0E3150;
+    color: #FFFFFE;
+    border-radius: 5px;
+    width: 150px;
+    margin: 10px auto 0;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 260px 0 0 30px;
+
+}
+
+.container{
+    width: 70vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    font-weight: ;
+    flex-wrap: inherit;
+}
