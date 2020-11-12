@@ -1,3 +1,74 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?bic415');
+    src:  url('../fonts/icomoon.eot?bic415#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?bic415') format('truetype'),
+      url('../fonts/icomoon.woff?bic415') format('woff'),
+      url('../fonts/icomoon.svg?bic415#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+
+  /* @font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts_2/icomoon.eot?mwbzyx');
+    src:  url('../fonts_2/icomoon.eot?mwbzyx#iefix') format('embedded-opentype'),
+      url('../fonts_2/icomoon.ttf?mwbzyx') format('truetype'),
+      url('../fonts_2/icomoon.woff?mwbzyx') format('woff'),
+      url('../fonts_2/icomoon.svg?mwbzyx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    /* font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } */
+  
+  /* .icon-email:before {
+    content: "\e945";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  .icon-linkedin:before {
+    content: "\eaca";
+  }*/ 
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -8,6 +79,7 @@ body{
     justify-content: space-between;
     height: 50px;
     align-items: center;
+    flex-wrap: wrap;
     /* text-transform: ; */
 }
 .menu{
@@ -45,6 +117,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .hero-sentence{
     text-align: center;
@@ -59,6 +132,7 @@ body{
 }
 .hero-imageContainer{
     margin: 0;
+    
 }
 .hero-image{
     object-fit: cover;
@@ -68,15 +142,20 @@ body{
     /* margin: 0px 140px 30px 140px; */
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .profile{
-    width: 500px;
+    width: 50%;
+    /* margin: 5px; */
 }
 .profile h2{
     color: #0E3150;
 }
 .profile p{
     color: #464444;
+}
+.WhatIlovetodo{
+    width: 50%;
 }
 .WhatIlovetodo h2{
     color: #0E3150;
@@ -85,57 +164,38 @@ body{
 .lovetodo{
     display: flex;
     text-align: center;
-    width: 600px;
+    /* width: 600px; */
     height: 150px;
+    justify-content: center;
       
 }
-.travel{
+.lovetodo-brown{
     border: 1px solid #707070;
     border-radius: 8px;
     width: 100px;
     height: 100px;
     /* box-sizing: border-box; */
     background: #707070;
-    margin: 20px;
+    margin: 5px;
     /* text-align: center; */
     /* line-height: 100px; */
     color: #FFFFFE;
+    line-height: 80px;
+    text-align: center;
 }
-.eat{
+.lovetodo-pink{
     border: 1px solid #FFC0C2;
     border-radius: 8px;
     width: 100px;
     height: 100px;
-    margin: 20px;
+    margin: 5px;
     /* box-sizing: border-box; */
     background: #FFC0C2;
     /* text-align: center; */
     /* line-height: 100px; */
     color: #FFFFFE;
-}
-.movies{
-    border: 1px solid #707070;
-    border-radius: 8px;
-    width: 100px;
-    height: 100px;
-    /* box-sizing: border-box; */
-    background: #707070;
-    margin: 20px;
-    /* text-align: center; */
-    /* line-height: 100px; */
-    color: #FFFFFE;
-}
-.family{
-    border: 1px solid #FFC0C2;
-    border-radius: 8px;
-    width: 100px;
-    height: 100px;
-    /* box-sizing: border-box; */
-    background: #FFC0C2;
-    margin: 20px;
-    /* text-align: center; */
-    /* line-height: 100px; */
-    color: #FFFFFE;
+    line-height: 80px;
+    text-align: center;
 }
 .experience-list-title{
     background-color: #6DC9C8;
@@ -143,18 +203,19 @@ body{
 }
 .experience-list-title h2{
     margin: 0;
-    padding: 20px 0 0;
+    padding: 10px 0 0;
 }
-.experience-list{
+.experience-list{   
+    background-color: #6DC9C8;
+    padding: 20px 0;    
+}
+.experience-container{
     display: flex;
     flex-wrap: wrap;
-    background-color: #6DC9C8;
-    padding: 20px 0;
-    
 }
-.experience{
-    margin: 10px;
-    width: 480px;
+.experience {
+    margin: 1%;
+    width: 48%;
     flex-shrink: 0;
     border-radius: 10px;
     overflow: hidden;
@@ -164,30 +225,30 @@ body{
 .experience-imageContainer{
     margin: 0;
 }
-.experience-image-pm{
+/* .experience-image-pm{
     width: 380px;
     height: 250px;
     object-fit: cover;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 3em;
 }
 .experience-image-PM{
     width: 200px;
     height: 250px;
     object-fit: cover;
-    margin: 0 0 0 140px;
-}
+    margin: 0 0 0 8.7em;
+} */
 .experience-image{
-    width: 380px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
-    margin: 0 0 0 50px
+    margin: 0;
 }
-.experience-image-wd{
+/* .experience-image-wd{
     width: 250px;
     height: 200px;
     object-fit: cover;
-    margin: 0 0 0 120px;
-}
+    margin: 0 0 0 7.5em
+} */
 
 .experience-detail{
     margin: 20px 40px;
@@ -215,9 +276,9 @@ body{
 }
 .skills{
     display: flex;
-    margin: 10px;
+    margin: 0 10%;
     justify-content: space-between;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 .skills p::after {
     content: "|";
@@ -229,6 +290,7 @@ body{
 .form-and-social{
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
 .social{
     display: flex;
@@ -262,6 +324,8 @@ body{
     text-decoration: none;
     border-radius: 90px;
     align-self: flex-start;
+    line-height: 40px;
+    text-align: center;
 }
 .form-email label{
     width: 150px;
@@ -282,7 +346,7 @@ body{
 .message-container{
     width: 400px;
     margin: 0 0 0 50px;
-    height: 200px;
+    height: 230px;
     display: flex;
 }
 .message-container label{
@@ -316,6 +380,7 @@ body{
     /* margin: 100px 0 10px 0px; */
     justify-content: flex-start;
     align-content: space-between;
+    flex-wrap: wrap;
 }
 .contact-button{
     background: #0E3150;
@@ -327,13 +392,14 @@ body{
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-    margin: 260px 0 0 30px;
+    margin: 0 0 0 30px;
 
 }
 
 .container{
-    width: 70vw;
-    max-width: 1000px;
+    /* width: 70vw; */
+    max-width: 1200px;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -341,4 +407,245 @@ body{
     height: inherit;
     font-weight: ;
     flex-wrap: inherit;
+}
+
+.burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(247, 233, 227, 1);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color: #0E3150;    
+}
+
+/* Dado que estamos usando Desktop first, se recomienda empezar por el media query más grande */
+@media screen and (max-width: 1024px){   
+    .experience-image {
+        width: 100%;
+        margin: 0;
+    }   
+    .contact-button {
+        margin: 0 0 0 230px;
+    }
+    .hero {
+        height: auto;   
+        position: relative;   
+        overflow: hidden;
+        padding: 2em;  
+    }
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .burger-button{
+        display: block;
+    }
+    .header {
+        display: block;
+        height: auto;
+    }
+    .header ol{
+        display: block;
+    }
+    .header ol li {
+        height: 50px;        
+    }
+    .header a {
+        justify-content: center;
+        height: 40px;
+        font-size: 1.5em;
+        text-decoration: underline;
+        margin-bottom: .5em;
+    }
+    .header .logo{
+        text-align: center;
+    }
+    .menu{
+        position: fixed;
+        background-color: rgba(247, 233, 227, .9);
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        bottom: 0;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu.is-active {
+        left: 0;
+    }
+      
+    .aboutme{
+        display: block;
+    }
+    .profile {
+        width: auto;
+        font-size: 16px;
+    }
+    .profile h2{
+        font-size: 1em;
+    }
+    .profile p{
+        font-size: .8em;
+    }
+    .WhatIlovetodo {
+        width: auto;
+        font-size: 16px;
+    }
+    .WhatIlovetodo h2{
+        font-size: 1em;
+    }
+    .lovetodo{
+        font-size: 16px;
+    }
+    .lovetodo-brown .lovetodo-pink{
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+        font-size: .8em;        
+    }
+    .experience-list {
+        font-size: 16px;
+    }
+    .experience-list-title h2{
+        font-size: 1em;
+        padding: 0;
+    }
+    .experience {
+        width: auto;
+        flex-shrink: initial;        
+    }    
+    .experience-image {
+        width: 100%;
+        margin: 0;
+    } 
+    .experience-detail {
+        font-size: 16px;
+    }
+    .experience-title{
+        font-size: 1em;
+    }   
+    .experience-description {
+        font-size: .8em;
+    }
+    .skills {
+        font-size: .8em;
+        
+    }
+    .social {
+        flex-direction: column;
+    }
+    .social-link {
+        width: 2.5em;
+        height: 2.5em;
+        margin: .5em;
+    }
+    /* .form-and-social{
+        display: initial;
+    } */
+    .contact{
+        font-size: 16px;
+    }
+    .contact h2{
+        font-size: 1em;
+    }
+    .name-container label{
+        font-size: .8em;
+    }
+    .email-container label{
+        font-size: .8em;
+    }
+    .message-container label{
+        font-size: .8em;
+    }
+    .form-email {
+        font-size: 16px;
+    }
+    .contact-button {
+        font-size: 1em;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .hero-sentence{
+        font-size: 1.5em;
+        text-align: initial;
+    }
+    .experience-detail {
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+    .name-container label{
+        width: 7em;
+    }
+    .email-container label{
+        width: 7em;
+    }
+    .message-container label{
+        width: 7em;
+    }
+    .name-container {
+        width: 75%;
+        margin: 0;
+    }
+    .email-container {
+        width: 75%;
+        margin: 0;
+    }
+    .message-container {
+        width: 75%;
+        margin: 0;
+    }
+    .contact-button {
+        margin: 0 auto;
+    }
+    .form-email {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .skills {
+        margin: 0 5%;
+    }
+    .input-name {
+        padding: 0;
+    }
+    .input-email {
+        padding: 0;
+    }
+    .input-message {
+        padding: 0;
+    }
+    .hero-sentence {
+        font-size: 1.2em;        
+    }
+    .hero{
+        padding: 2em 1em;
+    }
+
+
 }

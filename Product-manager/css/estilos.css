@@ -9,6 +9,7 @@ html {
     height: 50px;
     align-items: center;
     border-bottom: 1px solid #707070;
+    flex-wrap: wrap;
 }
 .menu{
     height: inherit;
@@ -41,6 +42,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .hero-sentence{
     text-align: center;    
@@ -54,7 +56,7 @@ html {
 }
 .experience-container {
     border: 1px solid #FFC0C2;
-    width: 900px;
+    max-width: 900px;
     height: 500px;
     margin: 30px auto;    
 }
@@ -63,24 +65,27 @@ h3{
 }
 .experience-container-first{
     border: 1px solid #FFC0C2;
-    width: 900px;
+    max-width: 900px;
     height: 450px;
     margin: 30px auto;
 }
 .experince-sentence{
-    width: 850px;
+    max-width: 850px;
     padding: 0 15px;
 }
 .sentence-img-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 .experience-sentence-middle{
     width: 550px;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     order: 2;
 }
 .experience-image{
-    padding: 25px 10px 0 10px;
+    /* padding: 25px 10px 0 10px; */
     margin: 0;
 }
 .experience-sentence-middle-left{
@@ -89,7 +94,7 @@ h3{
 }
 .experience-container-last{
     border: 1px solid #FFC0C2;
-    width: 900px;
+    max-width: 900px;
     height: 340px;
     margin: 30px auto; 
 }
@@ -97,16 +102,13 @@ h3{
     width: 500px;
     padding: 0 30px 0 15px;
 }
-.contact{
-    background-color: #0E3150;
-}
 .contact h2{
-    color: white;
-    padding: 20px 0 0 0;
+    color: #0E3150;
 }
 .form-and-social{
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
 .social{
     display: flex;
@@ -121,7 +123,7 @@ h3{
     margin: 0 10px;
 }
 .social-link.gmail{
-    background-image: url('../Images/gmail.svg');
+    background-image: url('../images/gmail.svg');
 }
 .social-link.linkedin{
     background-image: url('../images/linkedin.svg');
@@ -134,7 +136,7 @@ h3{
     background-size: 40px 40px;
 }
 .social-link.cv{
-    background-color: #FFC0C2;
+    background-color: #0E3150;
     color: #FFFFFE;
     text-align: center;
     text-decoration: none;
@@ -151,27 +153,20 @@ h3{
     height: 40px;
     display: flex;
 }
-.name-container label{
-    color: white;
-}
 .email-container{
     width: 400px;
     margin: 0 0 0 50px;
     height: 40px;
     display: flex;
 }
-.email-container label{
-    color: white;
-}
 .message-container{
     width: 400px;
     margin: 0 0 0 50px;
-    height: 200px;
+    height: 230px;
     display: flex;
 }
 .message-container label{
     width: 130px;
-    color: white;
 }
 .input-name{
     border-radius: 5px;
@@ -197,12 +192,14 @@ h3{
     float: right;    
 }
 .form-email{
-    display: flex;    
+    display: flex;
+    /* margin: 100px 0 10px 0px; */
     justify-content: flex-start;
     align-content: space-between;
+    flex-wrap: wrap;
 }
 .contact-button{
-    background: #FFC0C2;
+    background: #0E3150;
     color: #FFFFFE;
     border-radius: 5px;
     width: 150px;
@@ -211,12 +208,12 @@ h3{
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-    margin: 260px 0 0 30px;
+    margin: 0 0 0 30px;
 
 }
 .container{
-    width: 70vw;
-    max-width: 1000px;
+    /* width: 70vw; */
+    max-width: 1200px;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -225,3 +222,180 @@ h3{
     font-weight: ;
     flex-wrap: inherit;
 }
+
+@media screen and (max-width: 1024px){
+    .contact-button {
+        margin: 0 0 0 230px;
+    }
+    .hero {
+        height: auto;   
+        position: relative;   
+        overflow: hidden;
+        padding: 2em;  
+    }
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+        position: relative;
+    }
+    .experience-container-first {
+        height: 100%;
+    }
+    .sentence-img-container p{
+        width: 55%;
+        padding: 0 1% 0 2%;
+        margin: 0;
+    }
+    .sentence-img-container figure{
+        width: 30%;
+        padding: 0 10% 0 0;
+    }
+    .experience-container{
+        height: 100%;
+    }
+    .experience-container-last{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header {
+        display: block;
+        height: auto;
+    }
+    .header ol{
+        display: block;
+    }
+    .header ol li {
+        height: 50px;        
+    }
+    .header a {
+        justify-content: center;
+    }
+    .header .logo{
+        text-align: center;
+    }
+    .sentence-img-container{
+        display: block;
+        font-size: 16px;
+    }
+    .sentence-img-container p{
+        width: 95%;
+        padding: 0 1em;
+        height: auto; 
+    }
+    .sentence-img-container figure{
+        margin: 0 8em;
+    }
+    .social {
+        flex-direction: column;
+    }
+    .social-link {
+        width: 2.5em;
+        height: 2.5em;
+        margin: .5em;
+    }   
+    .contact{
+        font-size: 16px;
+    }
+    .contact h2{
+        font-size: 1em;
+    }
+    .name-container label{
+        font-size: .8em;
+    }
+    .email-container label{
+        font-size: .8em;
+    }
+    .message-container label{
+        font-size: .8em;
+    }
+    .form-email {
+        font-size: 16px;
+    }
+    .contact-button {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero-sentence{
+        font-size: 1.5em;
+        text-align: initial;
+    }
+    .experience-container-first{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 1em;
+    }
+    .experince-sentence{
+        font-size: .8em;
+    }
+    .sentence-img-container p{
+        font-size: .8em;
+    }
+    .sentence-img-container figure{
+        margin: 0 4em;
+    }
+    .name-container label{
+        width: 7em;
+    }
+    .email-container label{
+        width: 7em;
+    }
+    .message-container label{
+        width: 7em;
+    }
+    .name-container {
+        width: 75%;
+        margin: 0;
+    }
+    .email-container {
+        width: 75%;
+        margin: 0;
+    }
+    .message-container {
+        width: 75%;
+        margin: 0;
+    }
+    .contact-button {
+        margin: 0 auto;
+    }
+    .form-email {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .input-name {
+        padding: 0;
+    }
+    .input-email {
+        padding: 0;
+    }
+    .input-message {
+        padding: 0;
+    }
+    .hero-sentence {
+        font-size: 1.2em;        
+    }
+    .hero{
+        padding: 2em 1em;
+    }
+    .sentence-img-container figure{
+        margin: auto;
+        width: 100%;
+    }
+}
+
+
