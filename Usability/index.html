@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
@@ -46,7 +47,7 @@
             <h3>User research</h3>
             <section class="sentence-img-container">
                 <p class="experince-sentence">
-                    Working with users has been a passion for me since I got my first work at 16 where I started to work as a sales representative in a small perfume store. The user research techniques have opened me a world of tools I can use to know deeply the users of the products I’m working on.<br> User research is one of my favorite things to do every day, I really enjoy talking to the users and empathize about their pain points. I always prefer to make interviews as a qualitative method but I often use polls and A/B tests as quantitative research. 
+                    Working with users has been a passion for me since I got my first work at 16 yearls old where I started to work as a sales representative in a small perfume store. The user research techniques have opened me a world of tools I can use to know deeply the users of the products I’m working on.<br> User research is one of my favorite things to do every day, I really enjoy talking to the users and empathize about their pain points. I always prefer to make interviews as a qualitative method but I often use polls and A/B tests as quantitative research. 
                 </p>
                 <figure class="experience-image">
                     <img src="./Images/User-research.png" width="300" height="180" alt="Imagen de los proyectos de control de combustible">
@@ -86,7 +87,7 @@
                 <h2>Contact me</h2>
             </div>
             <div class="form-and-social">
-                <form action="" class="form-email">
+                <!-- <form action="" class="form-email">
                     <div>
                         <div class="name-container">
                             <label for="name">Name</label>
@@ -104,9 +105,10 @@
                     <div>
                         <button class="contact-button" type="submit">Enviar</button>
                     </div>
-                </form>
+                </form> -->
+                <p>If you want to discuss a project, an idea or just to have a coffee, don't hesitate to contact me;):</p>
                 <div class="social">
-                    <a href="" class="social-link gmail"></a>
+                    <!-- <a href="" class="social-link gmail"></a> -->
                     <a href="https://twitter.com/Adri_urrego18" target="_blank" class="social-link twitter"></a>
                     <a href="https://www.linkedin.com/in/luz-adriana-urrego-m%C3%A9ndez-198406157/" target="_blank" class="social-link linkedin"></a>
                     <a href="https://github.com/AdrianaUrrego" target="_blank" class="social-link github"></a>
@@ -115,5 +117,34 @@
             </div>            
         </div>
     </section>
+    <script>     
+        console.log ();   
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        const menu = document.querySelector('.menu');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log(burgerButton);
+
+
+        ipad.addListener(validation)
+
+        function validation(event){
+            console.log(event.matches);
+            if (event.matches) {
+                burgerButton.addEventListener('click', hideShow)
+            } else {
+                burgerButton.removeEventListener('click', hideShow)
+            }
+        }
+        validation(ipad);
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else{
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>

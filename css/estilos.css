@@ -180,8 +180,8 @@ body{
     /* text-align: center; */
     /* line-height: 100px; */
     color: #FFFFFE;
-    line-height: 80px;
-    text-align: center;
+    /* line-height: 80px;
+    text-align: center; */
 }
 .lovetodo-pink{
     border: 1px solid #FFC0C2;
@@ -194,8 +194,8 @@ body{
     /* text-align: center; */
     /* line-height: 100px; */
     color: #FFFFFE;
-    line-height: 80px;
-    text-align: center;
+    /* line-height: 80px;
+    text-align: center; */
 }
 .experience-list-title{
     background-color: #6DC9C8;
@@ -290,13 +290,16 @@ body{
 .form-and-social{
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+}
+.form-and-social p{
+    width: 50%;
 }
 .social{
     display: flex;
     /* justify-content: space-between; */
    align-self: baseline; 
-   /* padding: 40px 0px; */
+   padding: 0 4em 0 0;
 }
 .social-link{
     width: 40px;
@@ -327,7 +330,7 @@ body{
     line-height: 40px;
     text-align: center;
 }
-.form-email label{
+/* .form-email label{
     width: 150px;
     margin: 10px 0;
 }
@@ -378,11 +381,11 @@ body{
 .form-email{
     display: flex;
     /* margin: 100px 0 10px 0px; */
-    justify-content: flex-start;
+    /* justify-content: flex-start;
     align-content: space-between;
     flex-wrap: wrap;
-}
-.contact-button{
+} */
+/* .contact-button{
     background: #0E3150;
     color: #FFFFFE;
     border-radius: 5px;
@@ -394,7 +397,7 @@ body{
     font-size: 18px;
     margin: 0 0 0 30px;
 
-}
+} */
 
 .container{
     /* width: 70vw; */
@@ -430,9 +433,9 @@ body{
         width: 100%;
         margin: 0;
     }   
-    .contact-button {
+    /* .contact-button {
         margin: 0 0 0 230px;
-    }
+    } */
     .hero {
         height: auto;   
         position: relative;   
@@ -453,9 +456,13 @@ body{
         z-index: 2;
         position: relative;
     }
+
 }
 
 @media screen and (max-width: 767px){
+    h2 {
+        font-size: 1.2em;
+    }
     .burger-button{
         display: block;
     }
@@ -504,19 +511,19 @@ body{
         width: auto;
         font-size: 16px;
     }
-    .profile h2{
+    /* .profile h2{
         font-size: 1em;
-    }
+    } */
     .profile p{
-        font-size: .8em;
+        font-size: .9em;
     }
     .WhatIlovetodo {
         width: auto;
         font-size: 16px;
     }
-    .WhatIlovetodo h2{
+    /* .WhatIlovetodo h2{
         font-size: 1em;
-    }
+    } */
     .lovetodo{
         font-size: 16px;
     }
@@ -524,13 +531,16 @@ body{
         width: 80px;
         height: 80px;
         margin: 5px;
-        font-size: .8em;        
+        font-size: .8em;     
+        display: flex;
+        align-items: center;
+        justify-content: center;   
     }
     .experience-list {
         font-size: 16px;
     }
     .experience-list-title h2{
-        font-size: 1em;
+        /* font-size: 1em; */
         padding: 0;
     }
     .experience {
@@ -548,14 +558,16 @@ body{
         font-size: 1em;
     }   
     .experience-description {
-        font-size: .8em;
+        font-size: .9em;
     }
     .skills {
-        font-size: .8em;
+        font-size: .9em;
         
     }
     .social {
-        flex-direction: column;
+        /* flex-direction: column; */
+        padding: 0;
+        margin: 0 auto;
     }
     .social-link {
         width: 2.5em;
@@ -568,10 +580,14 @@ body{
     .contact{
         font-size: 16px;
     }
-    .contact h2{
-        font-size: 1em;
+    .form-and-social p{
+        width: 100vw;
+        font-size: .9em;
     }
-    .name-container label{
+    /* .contact h2{
+        font-size: 1em;
+    } */
+    /* .name-container label{
         font-size: .8em;
     }
     .email-container label{
@@ -585,11 +601,13 @@ body{
     }
     .contact-button {
         font-size: 1em;
-    }
+    } */
 }
 
 
 @media screen and (max-width: 480px) {
+    
+
     .hero-sentence{
         font-size: 1.5em;
         text-align: initial;
@@ -598,7 +616,7 @@ body{
         margin: -2em .5em .5em;
         padding: 1em;
     }
-    .name-container label{
+    /* .name-container label{
         width: 7em;
     }
     .email-container label{
@@ -625,12 +643,6 @@ body{
     .form-email {
         max-width: 75%;
     }
-}
-
-@media screen and (max-width: 320px){
-    .skills {
-        margin: 0 5%;
-    }
     .input-name {
         padding: 0;
     }
@@ -639,7 +651,22 @@ body{
     }
     .input-message {
         padding: 0;
+    } */
+}
+
+@media screen and (max-width: 320px){
+    .skills {
+        margin: 0 5%;
     }
+    /* .input-name {
+        padding: 0;
+    }
+    .input-email {
+        padding: 0;
+    }
+    .input-message {
+        padding: 0;
+    } */
     .hero-sentence {
         font-size: 1.2em;        
     }

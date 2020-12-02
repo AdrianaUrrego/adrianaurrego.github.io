@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
@@ -68,14 +69,14 @@
             </p>
             <section class="sentence-img-container">
                 <p class="experience-sentence-middle-left">
-                    In the meantime, I create one-to-one meetings with the people who were on the front lines because I was too interested to know how they made their work and what were their pain points, I also made a lot of interviews with customers, knowing their logistic process to find what the most important features for the platform were.<br> With all this information I establish 10 different insights that ended up in around 30 different user histories with high, medium, and low priority requirements that were included and delivered in our weekly sprints.
+                    In the meantime, I create one-to-one meetings with the people who were on the front lines because I was too interested to know how they made their work and what were their pain points, I also made a lot of interviews with customers, knowing their logistic process to find what werw the most important features for the platform.<br> With all this information I establish 10 different insights that ended up in around 30 different user histories with high, medium, and low priority requirements that were included and delivered in our weekly sprints.
                 </p>
                 <figure class="experience-image">
                     <img src="./Images/Logistic-operation.png" width="300" height="180" alt="Imagen de FleetSAP">
                 </figure>
             </section>
             <p class="experince-sentence">
-                Nowadays, we continue to release deliverables every week, to help our operation team to optimize the logistic of our customers.
+                Nowadays, we continue releasing deliverables every week, to help our operation team to optimize the logistic of our customers.
             </p>
         </div>
     </section>
@@ -98,7 +99,7 @@
                 <h2>Contact me</h2>
             </div>
             <div class="form-and-social">
-                <form action="" class="form-email">
+                <!-- <form action="" class="form-email">
                     <div>
                         <div class="name-container">
                             <label for="name">Name</label>
@@ -114,11 +115,12 @@
                         </div>    
                     </div>
                     <div>
-                        <button class="contact-button" type="submit">Enviar</button>
+                        <button class="contact-button" type="submit">Send</button>
                     </div>
-                </form>
+                </form> -->
+                <p>If you want to discuss a project, an idea or just to have a coffee, don't hesitate to contact me;):</p>
                 <div class="social">
-                    <a href="" class="social-link gmail"></a>
+                    <!-- <a href="" class="social-link gmail"></a> -->
                     <a href="https://twitter.com/Adri_urrego18" target="_blank" class="social-link twitter"></a>
                     <a href="https://www.linkedin.com/in/luz-adriana-urrego-m%C3%A9ndez-198406157/" target="_blank" class="social-link linkedin"></a>
                     <a href="https://github.com/AdrianaUrrego" target="_blank" class="social-link github"></a>
@@ -127,5 +129,34 @@
             </div>            
         </div>
     </section>
+    <script>     
+        console.log ();   
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        const menu = document.querySelector('.menu');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log(burgerButton);
+
+
+        ipad.addListener(validation)
+
+        function validation(event){
+            console.log(event.matches);
+            if (event.matches) {
+                burgerButton.addEventListener('click', hideShow)
+            } else {
+                burgerButton.removeEventListener('click', hideShow)
+            }
+        }
+        validation(ipad);
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else{
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>
