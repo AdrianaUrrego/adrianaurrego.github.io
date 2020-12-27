@@ -28,7 +28,11 @@
   .icon-menu:before {
     content: "\e900";
   }
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 html {    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -88,17 +92,20 @@ html {
 .experience-container {
     border: 1px solid #FFC0C2;
     max-width: 900px;
-    height: 500px;
-    margin: 30px auto;    
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;    
 }
 h3{
     text-align: center;
+    padding: 10px 0;
 }
 .experience-container-first{
     border: 1px solid #FFC0C2;
     max-width: 900px;
-    height: 450px;
+    height: auto;
     margin: 30px auto;
+    padding: 10px;
 }
 .experince-sentence{
     max-width: 850px;
@@ -126,8 +133,9 @@ h3{
 .experience-container-last{
     border: 1px solid #FFC0C2;
     max-width: 900px;
-    height: 340px;
-    margin: 30px auto; 
+    height: auto;
+    margin: 30px auto;
+    padding: 10px; 
 }
 .experince-sentence-last{
     width: 500px;
