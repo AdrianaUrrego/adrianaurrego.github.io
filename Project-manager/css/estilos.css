@@ -103,13 +103,19 @@ html {
 }
 .hero-image{
     object-fit: cover;
-    
+    border-radius: 30%;
+}
+.experience {
+    background-color: #6DC9C8;
+    margin: 0;
+    padding: 15px 0;
 }
 .experience-container {
-    border: 1px solid #FFC0C2;
+    border: 15px solid #F7E9E3;
     max-width: 1000px;
-    height: 300px;
-    margin: 30px auto;
+    /* height: 300px; */
+    margin: 0 auto 10px;
+    background-color: white;
     
 }
 .experience-container h3{
@@ -123,11 +129,11 @@ html {
     align-items: center;
 }
 .experience-container p{
-    margin: 0;
+    margin: 15px 0;
 }
 .experince-sentence{
-    width: 500px;
-    height: 230px;
+    /* width: 500px;
+    height: 230px; */
     padding: 0 35px;
     order: 2;
 }
@@ -146,11 +152,13 @@ html {
     margin: 0;
 }
 .contact{
-    background-color: #F7E9E3;
+    background-color: white;
+    margin-bottom: 15px;
 }
 
 .contact h2{
     color: #0E3150;
+    margin: 10px 0;
 }
 .form-and-social{
     display: flex;
@@ -300,7 +308,7 @@ html {
         overflow: hidden;
         padding: 2em;  
     }
-    .hero-image {
+    .hero-image {        
         position: absolute;
         z-index: 1;
         left: 0;
@@ -308,6 +316,8 @@ html {
         top: 0;
         bottom: 0;
         width: 100%;
+        border-radius: 0%;
+        
     }
     h1 {
         font-size: 2em;
@@ -315,16 +325,22 @@ html {
         position: relative;
         color: white;
     }
+    .experience {
+        padding: 15px;
+    }
     .experience-container{
         height: 100%;
     }
     .sentence-img-container p{
-        width: 55%;
+        /* width: 55%; */
         padding: 0 1%;
     }
-    .sentence-img-container figure{
+    /* .sentence-img-container figure{
         width: 30%;
         padding: 0 1%;
+    } */
+    .contact {
+        padding: 15px;
     }
 }
 
@@ -371,6 +387,9 @@ html {
     .header .logo{
         text-align: center;
     }
+    .experience {
+        padding: 15px;
+    }
     /* .experience-container{
         height: 100%;
     } */
@@ -384,9 +403,9 @@ html {
         padding: 0 1em;
         height: auto;        
     }
-    .sentence-img-container figure{
+    /* .sentence-img-container figure{
         margin: 0 8em;        
-    }
+    } */
     .social {
         /* flex-direction: column; */
         padding: 0;
@@ -432,15 +451,18 @@ html {
     h3{
         font-size: 1em;
     }
+    .experience {
+        padding: 15px;
+    }
     /* .experience-container{
         height: 100%;
     } */
     .sentence-img-container p{
         font-size: .8em;
     }
-    .sentence-img-container figure{
+    /* .sentence-img-container figure{
         margin: 0 4em;        
-    }
+    } */
     .name-container label{
         width: 7em;
     }
@@ -498,8 +520,11 @@ html {
     .hero{
         padding: 2em 1em;
     }
-    .sentence-img-container figure{
+    .experience-container {
+        border: 10px solid #F7E9E3;
+    }
+    /* .sentence-img-container figure{
         margin: auto;
         width: 100%;
-    }
+    } */
 }
