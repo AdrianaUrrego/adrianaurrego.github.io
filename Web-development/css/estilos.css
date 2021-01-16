@@ -90,24 +90,32 @@ html {
 }
 .hero-image{
     object-fit: cover;
-    padding: 0 150px 0 0;
+    /* padding: 0 150px 0 0; */
+    border-radius: 30%;
 }
-.experience-container {
-    border: 1px solid #FFC0C2;
+.experience {
+    background-color: #6DC9C8;
+    margin: 0;
+    padding: 15px 0;
+}
+.experience-container {    
+    border: 15px solid #F7E9E3;
     max-width: 900px;
-    height: 300px;
-    margin: 30px auto;    
+    /* height: 300px; */
+    margin: 0 auto 10px;
+    background-color: white;   
 }
 .experince-sentence{
-    max-width: 850px;
+    /* max-width: 850px; */
     /* height: 150px; */
     padding: 0 35px;    
 }
-.experience-image{
+/* .experience-image{
     margin: 0 0 0 300px;
-}
+} */
 .contact{
-    background-color: #F7E9E3;
+    background-color: white;
+    margin-bottom: 15px;
 }
 
 .contact h2{
@@ -254,7 +262,7 @@ html {
         margin: 0 0 0 230px;
     } */
     .hero {
-        height: auto;   
+        height: 100px;   
         position: relative;   
         overflow: hidden;
         padding: 2em;  
@@ -267,11 +275,16 @@ html {
         top: 0;
         bottom: 0;
         width: 100%;
+        border-radius: 0%;
     }
     h1 {
         font-size: 2em;
         z-index: 2;
         position: relative;
+        color: white;
+    }
+    .experience {
+        padding: 15px;
     }
     .experience-container{
         height: 100%;
@@ -322,9 +335,12 @@ html {
     .header .logo{
         text-align: center;
     }
-    .experience-image{
-        margin: 0 auto;
+    .experience {
+        padding: 15px;
     }
+    /* .experience-image{
+        margin: 0 auto;
+    } */
     .social {
         /* flex-direction: column; */
         padding: 0;
@@ -367,6 +383,9 @@ html {
         font-size: 1.5em;
         text-align: initial;
     }
+    .experience {
+        padding: 15px;
+    }
     .experience-container{
         font-size: 16px;
     }
@@ -374,9 +393,9 @@ html {
     .experience-container p{
         font-size: .8em;
     }
-    .experience-container figure{
+    /* .experience-container figure{
         margin: 0 4em;        
-    }
+    } */
     .name-container label{
         width: 7em;
     }
@@ -430,5 +449,8 @@ html {
     }
     .hero{
         padding: 2em 1em;
+    }
+    .experience-container {
+        border: 10px solid #F7E9E3;
     }
 }
