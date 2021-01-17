@@ -440,7 +440,7 @@ body{
 }
 
 /* Dado que estamos usando Desktop first, se recomienda empezar por el media query más grande */
-@media screen and (max-width: 1025px){   
+@media screen and (max-width: 1020px){   
     .experience {
         width: 87%;
         
