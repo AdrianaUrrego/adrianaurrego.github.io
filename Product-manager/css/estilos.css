@@ -427,7 +427,7 @@ h3{
     }
     .form-and-social p{
         width: 100vw;
-        font-size: .9em;
+        /* font-size: .9em; */
     }
     /* .contact h2{
         font-size: 1em;
@@ -478,6 +478,9 @@ h3{
     }
     .sentence-img-container figure{
         margin: 0 4em;
+    }
+    .form-and-social p{        
+        font-size: .9em;
     }
     /* .name-container label{
         width: 7em;

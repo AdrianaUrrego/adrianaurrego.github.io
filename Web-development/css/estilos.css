@@ -28,7 +28,9 @@
   .icon-menu:before {
     content: "\e900";
   }
-
+*{
+    margin: 0;
+}
 html {    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -109,7 +111,7 @@ html {
 .experince-sentence{
     /* max-width: 850px; */
     /* height: 150px; */
-    padding: 0 35px;    
+    padding: 10px 35px;    
 }
 /* .experience-image{
     margin: 0 0 0 300px;
@@ -121,6 +123,7 @@ html {
 
 .contact h2{
     color: #0E3150;
+    margin: 10px 0;
 }
 .form-and-social{
     display: flex;
@@ -289,6 +292,9 @@ html {
     }
     .experience-container{
         height: 100%;
+    }
+    .contact {
+        margin: 0 1em 1em;
     }
 }
 

@@ -67,7 +67,11 @@
   }
   .icon-linkedin:before {
     content: "\eaca";
-  }*/ 
+  }*/
+*{
+    margin: 0;
+}  
+
 html {
     scroll-behavior: smooth;
 }
@@ -147,6 +151,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 .profile{
     width: 50%;
@@ -154,6 +159,7 @@ body{
 }
 .profile h2{
     color: #0E3150;
+    margin-bottom: 10px;
 }
 .profile p{
     color: #464444;
@@ -164,6 +170,7 @@ body{
 .WhatIlovetodo h2{
     color: #0E3150;
     text-align: center;
+    margin-bottom: 10px;
 }
 .lovetodo{
     display: flex;
@@ -274,7 +281,12 @@ body{
     text-align: center;
     border-radius: 8px;
 } */
-
+.experience-title{
+    margin-bottom: 10px;
+}
+.experience-description {
+    margin-bottom: 10px;
+}
 .experience-button{
     background-color: #0E3150 ;
     color: white;
@@ -283,7 +295,7 @@ body{
     border-radius: 5px;
     width: 100px;
     text-transform: uppercase;
-    margin: 0 auto;  
+    margin: 0 auto 15px;  
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.60);     
 }
 .experience-button a{
@@ -300,8 +312,12 @@ body{
     content: "|";
     padding: 5px;
 } */
+.contact {
+    margin: 15px 0;
+}
 .contact h2{
     color: #0E3150;
+    margin-bottom: 10px;
 }
 .form-and-social{
     display: flex;
@@ -445,17 +461,6 @@ body{
 
 /* Dado que estamos usando Desktop first, se recomienda empezar por el media query más grande */
 @media screen and (max-width: 1024px){   
-    .experience {
-        width: 87%;
-        
-    }
-    /* .experience-image {
-        width: 100%;
-        margin: 0;
-    }    */
-    /* .contact-button {
-        margin: 0 0 0 230px;
-    } */
     .hero {
         height: auto;   
         position: relative;   
@@ -478,7 +483,44 @@ body{
         position: relative;
         color: white;
     }
-
+    .aboutme {
+        margin: 1.2em;
+    }
+    .profile h2 {
+        margin: .8em 0;
+    }
+    .WhatIlovetodo h2 {
+        margin: .8em 0;
+    }
+    .experience {
+        width: 87%;
+        
+    }
+    .experience-list {
+        padding: 1.2em;
+    }
+    .experience-title {
+        margin-bottom: .8em;
+    }
+    .experience-description {
+        margin-bottom: .8em;
+    }
+    .experience-button {
+        margin: .8em;
+    }
+    /* .experience-image {
+        width: 100%;
+        margin: 0;
+    }    */
+    /* .contact-button {
+        margin: 0 0 0 230px;
+    } */
+    .contact {
+        padding: 1.2em;
+    }
+    .contact h2 {
+        margin-bottom: .5em;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -568,7 +610,7 @@ body{
     .experience {
         width: auto;
         flex-shrink: initial; 
-        padding: 10px;       
+        padding: 1em;       
     }    
     /* .experience-image {
         width: 100%;
@@ -628,16 +670,28 @@ body{
 }
 
 
-@media screen and (max-width: 480px) {
-    
+@media screen and (max-width: 480px) {   
 
     .hero-sentence{
         font-size: 1.5em;
         text-align: initial;
     }
-    .experience-detail {
+    .experience-list-title{
+        margin-bottom: .6em;
+    }
+    /* .experience-detail {
         margin: -2em .5em .5em;
         padding: 1em;
+    } */
+    .experience-title {
+        margin: .8em;
+    }
+    .aboutme {
+        margin: .8em;
+        padding: 0;
+    }
+    .skills {
+        margin-top: .3px;
     }
     /* .name-container label{
         width: 7em;
@@ -677,7 +731,7 @@ body{
     } */
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px){    
     .skills {
         margin: 0 5%;
     }
@@ -696,6 +750,8 @@ body{
     .hero{
         padding: 2em 1em;
     }
-
+    .WhatIlovetodo{
+        margin-top: 2em;
+    }
 
 }
