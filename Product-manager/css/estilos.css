@@ -307,19 +307,20 @@ h3{
     }
     .hero-image {
         position: absolute;
-        z-index: 1;
-        /* left: 0; */
+        /* z-index: 1; */
+        left: 0;
         right: 0;
         top: 0;
-        bottom: 0;
-        width: 50%;
-        border-radius: 20%
+        /* bottom: 0; */
+        width: 100%;
+        border-radius: 0%;
+        object-fit: cover;
     }
     h1 {
         font-size: 2em;
         z-index: 2;
         position: relative;
-        /* color: white; */
+        color: white;
     }
     .experience {
         padding: 15px;
@@ -396,9 +397,9 @@ h3{
     .hero-image {
         position: absolute;
         left: 0;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
-        border-radius: 0%;
+        /* border-radius: 0%; */
     }
     .sentence-img-container{
         display: block;
@@ -450,7 +451,7 @@ h3{
 }
 
 @media screen and (max-width: 480px){
-    .hero-image {
+    /* .hero-image {
         position: absolute;
         z-index: 1;
         left: 0;
@@ -459,7 +460,7 @@ h3{
         bottom: 0;
         width: 100%;
         border-radius: 0%
-    }
+    } */
     .hero-sentence{
         font-size: 1.5em;
         text-align: initial;

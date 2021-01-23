@@ -292,7 +292,7 @@ html {
         margin: 0 0 0 230px;
     } */
     .hero {
-        height: auto;   
+        height: 200px;   
         position: relative;   
         overflow: hidden;
         padding: 2em;  
@@ -333,7 +333,7 @@ html {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     h2 {
         font-size: 1.2em;
     }
@@ -378,7 +378,12 @@ html {
     .menu.is-active {
         left: 0;
     }
-    
+    .hero {
+        height: 9em;
+    }
+    .hero-sentence {
+        top: 20px;
+    }
     .experience {
         padding: 15px;
     }
@@ -505,7 +510,7 @@ html {
         font-size: 1.2em;        
     }
     .hero{
-        padding: 2em 1em;
+        padding: 2em 1em;        
     }
     .experience-container {
         border: 10px solid #F7E9E3;
