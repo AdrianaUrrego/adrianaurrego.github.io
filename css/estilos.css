@@ -87,7 +87,8 @@ body{
     height: 50px;
     align-items: center;
     flex-wrap: wrap;
-    /* text-transform: ; */
+    border-bottom: 1px solid #707070;
+    padding-bottom: 10px;
 }
 .menu{
     height: inherit;
