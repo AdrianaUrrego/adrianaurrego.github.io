@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assessment System - Case Study | Adriana Urrego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f5f7fa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8ecf1;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b6b6b;
+            --text-muted: #9b9b9b;
+            --accent-primary: #2d2d2d;
+            --accent-blue: #4a7dff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.7;
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Problem/Solution Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Flow Section with alternating layout */
+        .flow-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .flow-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .flow-item.reverse {
+            direction: rtl;
+        }
+
+        .flow-item.reverse > * {
+            direction: ltr;
+        }
+
+        .flow-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .flow-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .flow-image {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            aspect-ratio: 9 / 16;
+            max-height: 600px;
+        }
+
+        .flow-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .flow-image p {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .flow-image span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .next-project {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--text-primary);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .next-project:hover {
+            background: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-item,
+            .flow-item.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .flow-item.reverse > * {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="Index.html" class="nav-logo">Adriana Urrego</a>
+            <a href="Index.html#work" class="nav-back">← Back to Work</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>AI Assessment System</h1>
+        <p class="subtitle">Auto-generates question banks and evaluates open responses in real-time, with gamification that increased post-exam engagement by 20%.</p>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">01 — Problem</span>
+            <h2>Manual, Slow, and Limited</h2>
+            <p class="section-description">
+                The existing evaluation system depended entirely on manual work, supporting only closed-ended questions.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>Time-Intensive Creation</h3>
+                <p>Creating quality question banks required extensive manual effort, delaying course launches.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Limited Question Types</h3>
+                <p>Only multiple-choice questions were supported, preventing deeper evaluation of student understanding.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Poor Engagement</h3>
+                <p>Static exam experiences led to high abandonment rates and low motivation to complete assessments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">02 — Solution</span>
+            <h2>AI-Powered Assessment Creation & Grading</h2>
+            <p class="section-description">
+                An intelligent system that automatically generates comprehensive question banks and evaluates both closed and open-ended responses with gamification elements.
+            </p>
+        </div>
+
+        <div class="flow-item">
+            <div class="flow-content">
+                <h3>Question Bank Generation</h3>
+                <p>
+                    When a course is created, the system automatically generates a comprehensive question bank by analyzing lesson content.
+                </p>
+                <p>
+                    Questions are stored in a database, tagged by lesson and type (multiple choice, open-ended, fill-in-blank), ready to be served when students take exams.
+                </p>
+            </div>
+            <div class="flow-image">
+                <img src="Images/exams-question-bank.png" alt="Question Bank Creation - AI-generated questions from course content">
+            </div>
+        </div>
+
+        <div class="flow-item reverse">
+            <div class="flow-content">
+                <h3>Random Question Selection</h3>
+                <p>
+                    Each time a student starts an exam, the system randomly selects one question per lesson. The algorithm ensures variety while maintaining a minimum threshold of open-ended questions to assess deeper comprehension.
+                </p>                
+            </div>
+            <div class="flow-image">
+                <img src="Images/exams-selection.png" alt="Exam Assembly - One question per lesson, 25% open-ended minimum">
+            </div>
+        </div>
+
+        <div class="flow-item">
+            <div class="flow-content">
+                <h3>Real-Time Open-Ended Grading</h3>
+                <p>
+                    For open-ended questions, AI evaluates responses instantly by comparing student answers against expected responses and lesson context. The system doesn't just look for keywords—it assesses conceptual understanding and accuracy.
+                </p>                
+            </div>
+            <div class="flow-image">
+                <img src="Images/exams-grading.png" alt="AI Grading Engine - Context-aware evaluation of written responses">
+            </div>
+        </div>
+
+        <div class="flow-item reverse">
+            <div class="flow-content">
+                <h3>Gamified Experience</h3>
+                <p>
+                    Students see immediate feedback with animations for correct/incorrect answers, building answer streaks that add competitive motivation. If they fail, they can retry incorrect questions within the allowed timeframe rather than retaking the entire exam.
+                </p>                
+            </div>
+            <div class="flow-image">
+                <img src="Images/exams-gamification.png" alt="Interactive Exam Interface - Streaks, animations, immediate feedback, retry options">
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">03 — Impact</span>
+            <h2>Engagement & Retention Gains</h2>
+            <p class="section-description">
+                The new assessment system reduced abandonment and increased post-exam engagement significantly.
+            </p>
+        </div>
+
+        <div class="results-grid">
+            <div class="stat-card">
+                <div class="stat-number">-5%</div>
+                <div class="stat-label">Reduction in exam abandonment rate</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">+20%</div>
+                <div class="stat-label">Increase in classes viewed after completing exam</div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Key Learnings Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">04 — Key Learnings</span>
+            <h2>What I Learned Building This</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>Gamification Drives Completion</h3>
+                <p>Adding streaks, animations, and retry mechanics transformed exams from intimidating barriers into engaging experiences. Small UX details had outsized impact on motivation.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>AI Enables Deeper Assessment</h3>
+                <p>Open-ended evaluation was previously impossible at scale. AI grading unlocked richer assessment types without requiring manual instructor review for every response.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Instant Feedback Matters</h3>
+                <p>Real-time grading and immediate certificate sharing created positive reinforcement loops. Students appreciated knowing results instantly rather than waiting for manual review.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <a href="Index.html" class="next-project">Next product →</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVDMFNM');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi Learn V1 - Case Study | Adriana Urrego</title>
+    <link rel="icon" type="image.png" href="Images/Favicon.PNG" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8ecf1;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b6b6b;
+            --text-muted: #9b9b9b;
+            --accent-primary: #2d2d2d;
+            --accent-blue: #4a7dff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        /* Metadata Grid */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .meta-item h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .meta-item p {
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Problem/Solution Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .info-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .info-card li {
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.6rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .info-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Architecture Section */
+        .architecture-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .architecture-content h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .architecture-content h4 {
+            color: var(--text-primary);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .tech-tag {
+            padding: 0.5rem 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .process-flow {
+            margin-top: 3rem;
+        }
+
+        .flow-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .flow-step:nth-child(even) {
+            direction: rtl;
+        }
+
+        .flow-step:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .step-content {
+            padding: 1rem 0;
+        }
+
+        .step-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .step-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-image-wrapper:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .step-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 968px) {
+            .flow-step {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .flow-step:nth-child(even) {
+                direction: ltr;
+            }
+
+            .step-image-wrapper {
+                order: -1;
+            }
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            margin-top: 3rem;
+        }
+
+        .gallery-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Key Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .feature-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .next-project {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--text-primary);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .next-project:hover {
+            background: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .card-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVDMFNM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav>
+        <div class="nav-content">
+            <a href="Index.html" class="nav-logo">Adriana Urrego</a>
+            <a href="Index.html#work" class="nav-back">← Back to Work</a>
+        </div>
+    </nav>
+
+    <div class="hero">        
+        <h1>Platzi Learn V1</h1>
+        <p class="subtitle">Transforming enterprise documentation into engaging, structured learning experiences through AI-powered course generation.</p>
+
+    <!-- Problem Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">01 — Problem</span>
+            <h2>The Enterprise Training Challenge</h2>
+            <p class="section-description">
+                Companies struggle to transform their internal knowledge into effective training programs. Documentation exists scattered across formats, and creating structured educational content requires weeks of expert work.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>Scattered Content</h3>
+                <p>Documentation exists across PDFs, PowerPoints, videos, and spreadsheets without educational structure or cohesive learning framework.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Time-Intensive Process</h3>
+                <p>Converting technical documentation into effective courses requires weeks of work from instructional design experts.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Generic Experiences</h3>
+                <p>Traditional platforms offer one-size-fits-all solutions that don't adapt to company context or employee knowledge levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">02 — Solution</span>
+            <h2>AI-Powered Course Generation</h2>
+            <p class="section-description">
+                Platzi Learn uses multi-agent AI systems to automatically transform company documentation into complete, structured courses with progressive learning modules, AI-narrated lessons, and built-in assessments.
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <h4>Automated Course Creation</h4>
+                <p>Generates complete syllabus with progressive modules from basic to advanced levels, organizing content into logical learning sequences.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>AI Narration</h4>
+                <p>Creates natural-sounding audio lessons with coherent narratives that follow project-based learning throughout the entire course.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Multi-Format Support</h4>
+                <p>Processes videos, PDFs, Excel, and documents—extracting and vectorizing content for intelligent course generation.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Intelligent Personalization</h4>
+                <p>Adapts content to target audience and knowledge level, supporting multiple languages with customizable narrator voices.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Automatic Summaries</h4>
+                <p>Generates concise lesson summaries for quick review and reference, enhancing knowledge retention.</p>
+            </div>
+
+            <div class="feature-item">
+                <h4>Best Practices Integration</h4>
+                <p>Applies Platzi's 10+ years of educational expertise to ensure effective learning outcomes and engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">03 — System Architecture</span>
+            <h2>Building for Scale & Reliability</h2>
+            <p class="section-description">
+                The architecture evolved from a simple microservice approach to a sophisticated orchestration system capable of managing complex, multi-step course generation workflows.
+            </p>
+        </div>
+
+        <div class="architecture-content">
+            <h3 style="margin-bottom: 1rem;">Evolution of the System</h3>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                We started with a straightforward microservice architecture using task queues. While functional, it struggled with reliability and visibility into the multi-stage course generation process. As we scaled to handle larger document sets and more complex workflows, we needed better orchestration.
+            </p>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                The breakthrough came when we reimagined the system around workflow orchestration rather than simple task processing. This allowed us to manage dependencies between steps, handle failures gracefully, and process multiple documents in parallel while maintaining a clear view of overall progress.
+            </p>
+
+            <div class="process-flow">
+                <h3 style="margin: 2rem 0 2.5rem;">Course Generation Flow</h3>
+
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Document Ingestion</h4>
+                        <p>Users upload documentation and define course objectives through a simple form interface. The system accepts multiple formats including PDFs, videos, presentations, and spreadsheets.</p>
+                    </div>
+                    <div class="step-image-wrapper">
+                        <img src="Images/platzi-learn-course-creation.png?v=2" alt="Course creation interface" class="step-image">
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Parallel Content Extraction</h4>
+                        <p>The orchestrator kicks off parallel processing for each document—extracting text, audio from videos, and creating searchable content indices. This parallelization dramatically reduced processing time.</p>
+                    </div>
+                    <div class="step-image-wrapper">
+                        <img src="Images/platzi-learn-processing.png?v=2" alt="Processing dashboard" class="step-image">
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Intelligent Course Structuring</h4>
+                        <p>Once all content is indexed, the system synthesizes information across documents to create a coherent syllabus. AI organizes topics from foundational concepts to advanced applications, ensuring logical progression.</p>
+                    </div>
+                    <div class="step-image-wrapper">
+                        <img src="Images/platzi-learn-syllabus.png?v=2" alt="Generated course syllabus" class="step-image">
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Lesson Generation</h4>
+                        <p>For each lesson in the syllabus, the system generates educational content, narrative scripts, and audio narration in parallel. Context from the overall course project ensures consistency across all lessons.</p>
+                    </div>
+                    <div class="step-image-wrapper">
+                        <img src="Images/platzi-learn-lesson-player.png?v=2" alt="Lesson player interface" class="step-image">
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Assembly & Publishing</h4>
+                        <p>The orchestrator assembles all components—combining audio, scripts, and metadata—then integrates with the platform's core to publish a complete, ready-to-use course.</p>
+                    </div>
+                    <div class="step-image-wrapper">
+                        <img src="Images/platzi-learn-lesson-editor.png?v=2" alt="Lesson editor interface" class="step-image">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">04 — Impact</span>
+            <h2>Business Results</h2>
+            <p class="section-description">
+                Platzi Learn unlocked a new B2B revenue stream by enabling companies to rapidly transform internal knowledge into professional learning experiences at scale.
+            </p>
+        </div>
+
+        <div class="results-grid">
+            <div class="stat-card">
+                <div class="stat-number">New</div>
+                <div class="stat-label">B2B product line unlocking significant revenue potential</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">50%</div>
+                <div class="stat-label">Reduction in course production time</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Documents processed simultaneously</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Languages & voices supported</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Key Learnings Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">05 — Key Learnings</span>
+            <h2>What I Learned Building This</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>Simplicity Over Complexity</h3>
+                <p>The initial architecture was over-complicated with unnecessary frameworks. Simplifying to focused orchestration improved reliability while maintaining capabilities.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Ship Now, Perfect Later</h3>
+                <p>Rather than wait for the perfect solution, we focused on immediate value delivery. This pragmatic approach unlocked revenue while continuing to evolve.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Iterate Based on Real Usage</h3>
+                <p>Assumptions about how companies would use the system evolved significantly after observing actual patterns. Quick iteration was crucial to product-market fit.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="placement-test-detail.html" class="next-project">Next product →</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Student Support - Case Study | Adriana Urrego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f5f7fa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8ecf1;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b6b6b;
+            --text-muted: #9b9b9b;
+            --accent-primary: #2d2d2d;
+            --accent-blue: #4a7dff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.7;
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Problem/Solution Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Flow Section with alternating layout */
+        .flow-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .flow-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .flow-item.reverse {
+            direction: rtl;
+        }
+
+        .flow-item.reverse > * {
+            direction: ltr;
+        }
+
+        .flow-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .flow-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .flow-image {
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flow-image p {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .flow-image span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /* Version Badge */
+        .version-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: var(--accent-blue);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .next-project {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--text-primary);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .next-project:hover {
+            background: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-item,
+            .flow-item.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .flow-item.reverse > * {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="Index.html" class="nav-logo">Adriana Urrego</a>
+            <a href="Index.html#work" class="nav-back">← Back to Work</a>
+        </div>
+    </nav>
+
+    <div class="hero">        
+        <h1>Instant Student Support</h1>
+        <p class="subtitle">AI assistant providing immediate answers to student questions within the learning interface, improving course completion by 10%.</p>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">01 — Problem</span>
+            <h2>Unanswered Questions Blocking Progress</h2>
+            <p class="section-description">
+                90% of student questions in class discussion sections went unanswered, creating barriers to understanding and causing course abandonment.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>No Immediate Help</h3>
+                <p>Students stuck on concepts had nowhere to get quick answers, leading to frustration and disengagement when they couldn't progress through lessons.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Community Couldn't Scale</h3>
+                <p>The discussion section relied on peer-to-peer help, but with 90% of questions unanswered, it wasn't providing the support students needed to succeed.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Abandonment at Confusion Points</h3>
+                <p>When students hit roadblocks without support, they simply left. Unanswered questions directly correlated with lower completion rates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">02 — Solution Evolution</span>
+            <h2>From Community Bot to Instant Assistant</h2>
+            <p class="section-description">
+                We built two versions, learning from each to find the right balance between community engagement and immediate student support.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>V1: Community Integration</h3>
+                <p>AI agent answered questions directly in the discussion section after 30 minutes of no community response, maintaining the social learning dynamic while providing backup support.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>V2: Dedicated Interface</h3>
+                <p>Created a separate, always-visible option within the learning interface providing instant AI responses. Students could optionally share answers as discussion posts if satisfied.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">03 — How It Works</span>
+            <h2>Context-Aware Question Answering</h2>
+        </div>
+
+        <div class="flow-item">
+            <div class="flow-content">
+                <h3>Platzi Bot <span class="version-badge">V1</span></h3>
+                <p>
+                    Students posted questions in the class discussion section as usual. If no community member responded within 30 minutes, the AI agent automatically replied with a contextual answer based on the lesson content.
+                </p>
+                <p>
+                    This preserved the community-first approach but provided a safety net for unanswered questions.
+                </p>
+            </div>
+            <div class="flow-image">
+                <img src="Images/platzi-bot-v1.png" alt="Discussion Section Integration" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div class="flow-item reverse">
+            <div class="flow-content">
+                <h3>Explainer <span class="version-badge">V2</span></h3>
+                <p>
+                    A dedicated "Ask a Question" feature became permanently visible in the learning interface. Students could ask anything about the current lesson and receive instant AI-generated responses.
+                </p>
+            </div>
+            <div class="flow-image">
+                <img src="Images/explainer-v2.jpg" alt="Dedicated Question Interface" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div class="flow-item">
+            <div class="flow-content">
+                <h3>Contextual Answer Generation</h3>
+                <p>
+                    Both versions use the same underlying prompt system: student question + lesson content + course context. A fast model ensure responses appear within seconds.
+                </p>
+                <p>
+                    In V2, after receiving an AI answer, students can choose to post it to the discussion section with their name, preserving community knowledge building while making immediate help the priority.
+                </p>
+            </div>
+            <div class="flow-image">
+                <img src="Images/ai-answer-engine.jpg" alt="AI Answer Engine" style="max-width: 100%; height: auto; border-radius: 4px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">04 — Impact</span>
+            <h2>Measurable Improvement in Completion</h2>
+            <p class="section-description">
+                Version 2's instant support approach drove significant gains in course completion and feature adoption.
+            </p>
+        </div>
+
+        <div class="results-grid">
+            <div class="stat-card">
+                <div class="stat-number">+10%</div>
+                <div class="stat-label">Increase in course completion rate</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">25K+</div>
+                <div class="stat-label">Students using the feature</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">200K+</div>
+                <div class="stat-label">Questions answered by AI</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Key Learnings Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">05 — Key Learnings</span>
+            <h2>What I Learned Building This</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>Solve the Real Problem First</h3>
+                <p>V1 tried to preserve an idealized community dynamic that didn't match actual behavior. V2 focused on what students actually needed, immediate help when stuck.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Speed Matters More Than Perfection</h3>
+                <p>Instant answers kept students moving forward. Waiting for perfect community responses that never came was worse than fast AI assistance.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Design for Actual Usage Patterns</h3>
+                <p>Students weren't using discussions for questions, so integrating there limited reach. Putting help directly in the learning interface met them where they already were.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#" class="next-project">Next Product →</a>
+    </footer>
+</body>
+</html>
