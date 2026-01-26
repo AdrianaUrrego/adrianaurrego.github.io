@@ -1,1 +1,2 @@
-*.png
+# macOS
+.DS_Store

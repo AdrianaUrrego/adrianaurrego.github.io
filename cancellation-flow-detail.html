@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVDMFNM');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntary Cancellation Flow - Case Study | Adriana Urrego</title>
+    <link rel="icon" type="image.png" href="Images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8ecf1;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b6b6b;
+            --text-muted: #9b9b9b;
+            --accent-primary: #2d2d2d;
+            --accent-blue: #4a7dff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.7;
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Problem/Solution Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .info-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .info-card li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Experiment Flow Layout */
+        .experiment-flow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 3rem;
+        }
+
+        .experiment-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .experiment-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .experiment-image-wrapper:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .experiment-image-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            max-width: 280px;
+        }
+
+        .experiment-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .experiment-placeholder {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 4rem 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            width: 100%;
+            aspect-ratio: 9/16;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-caption {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .experiment-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .experiment-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .experiment-box p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .experiment-box ul {
+            margin: 0.5rem 0 0 0;
+            padding-left: 1.2rem;
+        }
+
+        .experiment-box li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experiment-box strong {
+            color: var(--text-primary);
+        }
+
+        /* Learnings Cards */
+        .learnings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .learning-card {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .learning-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0369a1;
+            margin-bottom: 0.8rem;
+        }
+
+        .learning-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .next-project {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--text-primary);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .next-project:hover {
+            background: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experiment-flow {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .experiment-image-wrapper {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+
+            .experiment-image-container {
+                max-width: 100%;
+            }
+
+            .learnings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVDMFNM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav>
+        <div class="nav-content">
+            <a href="Index.html" class="nav-logo">Adriana Urrego</a>
+            <a href="Index.html#work" class="nav-back">← Back to Work</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Voluntary Cancellation Flow</h1>
+        <p class="subtitle">Redesigning the subscription cancellation experience to reduce churn while maintaining user trust and transparency.</p>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">01 — Problem</span>
+            <h2>Over Half of Churn Came from Voluntary Cancellations</h2>
+            <p class="section-description">
+                More than 50% of churn originated from the voluntary cancellation flow—students who directly chose to stop paying or had billing issues.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>No Self-Service Reactivation</h3>
+                <p>Students couldn't reactivate subscriptions on their own—they had to contact support, creating friction and reducing reactivation rates.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Confusing Interface</h3>
+                <p>The UX/UI had too many options that confused students, potentially leading them to cancel when they could have paused instead.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>No Payment Update Flow</h3>
+                <p>Students couldn't update credit card information and retry billing autonomously. Support contact was required, but rarely happened.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Iteration -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">02 — First Iteration</span>
+            <h2>Improved Alternatives with Cognitive Friction</h2>
+            <p class="section-description">
+                Initial approach focused on better cancellation alternatives and adding friction to reduce impulsive cancellations.
+            </p>
+        </div>
+
+        <div class="experiment-flow">
+            <div class="experiment-content">
+                <div class="experiment-box">
+                    <div class="experiment-label">Hypothesis</div>
+                    <p>If we <strong>modify the cancellation section</strong> by improving alternatives, adding credit card update options, and including cognitive friction, we will reduce voluntary cancellations.</p>
+                </div>
+
+                <div class="experiment-box">
+                    <div class="experiment-label">Changes Implemented</div>
+                    <ul>
+                        <li><strong>Context-specific alternatives:</strong> Different options presented based on cancellation reason</li>
+                        <li><strong>Self-service card updates:</strong> New flow allowing students to update payment information without contacting support</li>
+                        <li><strong>Hidden cancellation CTA:</strong> Moved the cancel button deeper into settings to add friction</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class="experiment-image-wrapper">
+                <div class="experiment-image-container">
+                    <img src="Images/cancellation-friction-1.png" alt="friction added to the cancel button" class="experiment-image">
+                    <p class="image-caption">Hidden cancellation CTA</p>
+                </div>
+                <div class="experiment-image-container">
+                    <img src="Images/cancellation-friction-2.png" alt="Cancellation flow with friction added" class="experiment-image">
+                    <p class="image-caption">Context-specific alternatives</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0;">Learnings</h3>
+        </div>
+
+        <div class="learnings-grid">
+            <div class="learning-card">
+                <h4>Mixed Success</h4>
+                <p>While we reduced cancellations, we saw increasing negative sentiment on social media about cancellation difficulty.</p>
+            </div>
+
+            <div class="learning-card">
+                <h4>Alternative Options Worked</h4>
+                <p>Many students found good alternatives that addressed their concerns without canceling.</p>
+            </div>
+
+            <div class="learning-card">
+                <h4>Card Update Was Effective</h4>
+                <p>Self-service payment updates reduced support requests by 60% without increasing past-due accounts.</p>
+            </div>
+
+            <div class="learning-card">
+                <h4>Key Insight</h4>
+                <p>Main cancellation reason was uncertainty about having money available at renewal time a year later.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Iteration -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">03 — Second Iteration</span>
+            <h2>Transparency with Strategic Alternatives</h2>
+            <p class="section-description">
+                Refined approach that removed manipulative friction while keeping effective alternatives and adding a cancellation reminder feature.
+            </p>
+        </div>
+
+        <div class="experiment-flow">
+            <div class="experiment-image-wrapper">
+                <div class="experiment-image-container">
+                    <img src="Images/cancellation-transparency-1.png" alt="Cancellation flow with friction removed" class="experiment-image">
+                    <p class="image-caption">Cancellation reminder</p>
+                </div>
+                <div class="experiment-image-container">
+                    <img src="Images/cancellation-transparency-2.png" alt="Transparent cancellation flow with reminder option" class="experiment-image">
+                    <p class="image-caption">Card update flow</p>
+                </div>
+            </div>
+
+            <div class="experiment-content">
+                <div class="experiment-box">
+                    <div class="experiment-label">Key Changes</div>
+                    <ul>
+                        <li><strong>Removed friction:</strong> Made the cancel button visible again as the main CTA, restoring user trust</li>
+                        <li><strong>Kept effective alternatives:</strong> Maintained improved cancellation options (pause, plan changes) and card update flow</li>
+                        <li><strong>Added cancellation reminder:</strong> New option to set a reminder 15 days before renewal instead of canceling immediately</li>
+                    </ul>
+                </div>
+
+                <div class="experiment-box">
+                    <div class="experiment-label">Why This Worked</div>
+                    <p>The cancellation reminder addressed the core concern: students were canceling immediately after purchase due to financial uncertainty about the future, not current dissatisfaction. By deferring the decision, they had more time to experience value.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0;">Impact</h3>
+        </div>
+
+        <div class="learnings-grid">
+            <div class="learning-card">
+                <h4>Better Brand Perception</h4>
+                <p>Social media complaints decreased significantly after removing manipulative friction.</p>
+            </div>
+
+            <div class="learning-card">
+                <h4>Win-Win Outcome</h4>
+                <p>Students felt more in control while we reduced premature cancellations.</p>
+            </div>
+
+            <div class="learning-card">
+                <h4>Addressed Root Cause</h4>
+                <p>The reminder feature directly solved the financial uncertainty problem.</p>
+            </div>
+
+            <div class="learning-card">
+                <h4>Maintained Improvements</h4>
+                <p>Card update and alternative options continued performing well.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">04 — Impact</span>
+            <h2>Measurable Churn Reduction</h2>
+            <p class="section-description">
+                The refined approach successfully reduced cancellations while improving user experience and brand trust.
+            </p>
+        </div>
+
+        <div class="results-grid">
+            <div class="stat-card">
+                <div class="stat-number">20%</div>
+                <div class="stat-label">Decrease in voluntary cancellation completion rate</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">60%</div>
+                <div class="stat-label">Reduction in payment-related support requests</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Learnings Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">05 — Key Takeaways</span>
+            <h2>What I Learned</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>User Trust is Non-Negotiable</h3>
+                <p>While friction can reduce cancellations short-term, it damages brand reputation and user trust long-term. Transparency always wins.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Find the Root Cause</h3>
+                <p>Through user research, we discovered the real reason for cancellations (financial uncertainty about future renewal) and addressed it directly with the reminder feature.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Iterate Based on Feedback</h3>
+                <p>The second iteration's success came from listening to both quantitative metrics and qualitative user feedback, including social media sentiment.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Self-Service Reduces Friction</h3>
+                <p>Enabling users to solve problems autonomously (card updates, pausing) improved experience for both users and support teams.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="Index.html#work" class="next-project">Back to Work →</a>
+    </footer>
+</body>
+</html>
