@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVDMFNM');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="Voluntary Cancellation Flow optimization at Platzi - Reducing churn through UX improvements">
+    <meta name="robots" content="index,follow">
+    <title>Voluntary Cancellation Flow - Adriana Urrego</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image.png" href="Images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVDMFNM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="Index.html" class="logo">Adriana Urrego</a>
+            <nav class="nav">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="Index.html#work" class="nav-link">Work</a></li>
+                    <li><a href="Index.html#teaching" class="nav-link">Teaching</a></li>
+                    <li><a href="Index.html#about" class="nav-link">About</a></li>
+                    <li><a href="Index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="Index.html#work" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to work
+            </a>
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">Voluntary Cancellation Flow</h1>
+                <p class="project-subtitle">Reducing churn through strategic UX improvements</p>
+            </div>
+
+            <!-- Problem Section -->
+            <div class="detail-section">
+                <h2 class="section-heading">The Problem</h2>
+                <p class="section-text">
+                    More than 50% of churn came from the voluntary cancellation flow—users who directly told us they no longer wanted to pay for their subscription or had issues with automatic billing.
+                </p>
+                <p class="section-text">
+                    Through detailed analysis of these flows, we found several critical issues:
+                </p>
+                <ul class="detail-list">
+                    <li>There was no way to reactivate a subscription directly on the platform; students had to contact us to do so.</li>
+                    <li>At the UX/UI level, this part of the interface had too many options that ended up confusing students, potentially leading them to cancel when they could have paused instead.</li>
+                    <li>There was no simple flow to update credit card information and retry billing autonomously; students always had to contact us, which didn't happen frequently.</li>
+                </ul>
+            </div>
+
+            <!-- First Iteration -->
+            <div class="detail-section iteration-section">
+                <h2 class="section-heading">Solution: First Iteration</h2>
+
+                <div class="experiment-detail">
+                    <h3 class="subsection-heading">Approach</h3>
+                    <p class="section-text">
+                        Improve the interface and options given to students based on their cancellation reason, in order to convince them during the process to keep their subscription. Additionally, add cognitive friction at the moment of canceling by hiding the cancellation CTA within a payment settings flow.
+                    </p>
+                </div>
+
+                <div class="experiment-detail">
+                    <h3 class="subsection-heading">Hypothesis</h3>
+                    <p class="section-text">
+                        If we <strong>modify the current section</strong> where students can cancel their subscription, changing the alternatives we give for canceling, the options to update their credit card, and also include some cognitive friction, we will get students to desist from making a voluntary cancellation.
+                    </p>
+                </div>
+
+                <div class="experiment-detail">
+                    <h3 class="subsection-heading">Experiment Design</h3>
+                    <p class="section-text"><strong>Type:</strong> A/B Test</p>
+                    <ul class="detail-list">
+                        <li><strong>Control group (A):</strong> Students visiting the section looking to cancel their subscription see the current version</li>
+                        <li><strong>Experiment group (B):</strong> These students will be shown the new interface with the new cancellation flow</li>
+                    </ul>
+                </div>
+
+                <div class="experiment-detail learnings">
+                    <h3 class="subsection-heading">Learnings</h3>
+                    <ul class="detail-list">
+                        <li>While we achieved the objective of reducing the number of students who ended up canceling through this flow, we began to notice an increasing amount of hate on our social media. Many users publicly complained about the difficulty of canceling their subscription and saw the increased friction as abuse and deception by the company.</li>
+                        <li>Analyzing the numbers and talking with students, we found that the changes made to the non-cancellation options had been positive, as many users found good alternatives to not canceling. We learned that one of the main reasons for canceling was uncertainty about having enough money in a year when renewal would take place, so we decided to focus on creating an alternative for this.</li>
+                        <li>The change in the credit card update flow ended up being very effective. The number of requests received by our support team related to this decreased by more than 60%, without this being reflected in a significant increase in the amount of payments in "past due" status.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Second Iteration -->
+            <div class="detail-section iteration-section">
+                <h2 class="section-heading">Solution: Second Iteration</h2>
+
+                <div class="experiment-detail">
+                    <h3 class="subsection-heading">Refined Approach</h3>
+                    <p class="section-text">
+                        Thanks to what we learned in the first experiment, we decided to keep the changes in cancellation options and credit card data updates. We only removed the adjustment to the cancellation CTA, leaving it visible as the main CTA in this interface.
+                    </p>
+                    <p class="section-text">
+                        Additionally, we added an option to generate a cancellation reminder, so that students wouldn't cancel renewal as soon as they purchased, but rather wait until it was about to expire. This gave them much more time to experience Platzi's value and ultimately decide not to cancel.
+                    </p>
+                </div>
+
+                <div class="experiment-detail">
+                    <h3 class="subsection-heading">Key Features</h3>
+                    <ul class="detail-list">
+                        <li><strong>Transparent cancellation:</strong> Removed friction by making the cancellation button visible and accessible</li>
+                        <li><strong>Cancellation reminder:</strong> New feature allowing students to set a reminder 15 days before renewal, reducing premature cancellations</li>
+                        <li><strong>Contextual alternatives:</strong> Kept improved alternatives based on cancellation reasons (pause, plan changes, etc.)</li>
+                        <li><strong>Self-service credit card updates:</strong> Streamlined flow for updating payment information without contacting support</li>
+                    </ul>
+                </div>
+
+                <div class="experiment-detail learnings">
+                    <h3 class="subsection-heading">Impact</h3>
+                    <ul class="detail-list">
+                        <li>Successfully balanced business needs with user trust by removing manipulative friction</li>
+                        <li>The cancellation reminder feature addressed the core concern of financial uncertainty</li>
+                        <li>Improved brand perception as social media complaints decreased significantly</li>
+                        <li>Created a win-win situation: students felt more in control while we reduced premature cancellations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="detail-section results-highlight">
+                <h2 class="section-heading">Overall Results</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-number">20%</div>
+                        <p class="result-description">Decrease in completion rate of the voluntary cancellation flow, helping more students who initiated the flow end up keeping automatic renewal of their subscription</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">60%</div>
+                        <p class="result-description">Reduction in support requests related to credit card updates, without increasing past-due payments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div class="detail-section">
+                <h2 class="section-heading">Key Takeaways</h2>
+                <ul class="detail-list">
+                    <li><strong>User trust matters:</strong> While friction can reduce cancellations short-term, it damages brand reputation and user trust long-term.</li>
+                    <li><strong>Understand the root cause:</strong> Through user research, we discovered the real reason for cancellations (financial uncertainty about future renewal) and addressed it directly.</li>
+                    <li><strong>Iterate based on feedback:</strong> The second iteration's success came from listening to both quantitative metrics and qualitative user feedback.</li>
+                    <li><strong>Self-service reduces friction:</strong> Enabling users to update payment information autonomously improved experience for both users and support team.</li>
+                </ul>
+            </div>
+
+            <!-- Navigation -->
+            <div class="project-navigation">
+                <a href="onboarding-experiments-detail.html" class="nav-project">
+                    <span class="nav-label">Previous</span>
+                    <span class="nav-title">Onboarding Experiments</span>
+                </a>
+                <a href="search-detail.html" class="nav-project">
+                    <span class="nav-label">Next</span>
+                    <span class="nav-title">AI-Powered Search</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h2 class="footer-title">Let's build something meaningful.</h2>
+                    <p class="footer-description">
+                        I'm always open to discussing new opportunities, product philosophy, or just chatting about the future of tech.
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:aurregom@gmail.com" class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4L10 11L17 4M3 4H17M3 4V16H17V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        aurregom@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/adriurrego/" target="_blank" class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H16C17.1 18 18 17.1 18 16V4C18 2.9 17.1 2 16 2ZM7 15H5V8H7V15ZM6 7C5.4 7 5 6.6 5 6C5 5.4 5.4 5 6 5C6.6 5 7 5.4 7 6C7 6.6 6.6 7 6 7ZM15 15H13V11.5C13 10.7 12.3 10 11.5 10C10.7 10 10 10.7 10 11.5V15H8V8H10V9C10.5 8.4 11.2 8 12 8C13.7 8 15 9.3 15 11V15Z" fill="currentColor"/>
+                        </svg>
+                        linkedin.com/in/adriurrego/
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed and developed with Claude Code</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
