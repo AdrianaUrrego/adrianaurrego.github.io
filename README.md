@@ -1,1 +1,194 @@
-# HTML-and-CSS-course
+# Adriana Urrego - Product Manager Portfolio
+
+A modern, responsive portfolio website showcasing AI-powered product development, case studies, and thought leadership in product management.
+
+## 🌟 About
+
+This portfolio highlights 7+ years of experience in product management, specializing in AI/ML integration and growth optimization. The site features detailed case studies of shipped products, technical articles, and insights into building products that balance user needs with business impact.
+
+**Live Site:** [adrianaurrego.github.io](https://adrianaurrego.github.io)
+
+## ✨ Features
+
+- **Responsive Design**: Mobile-first approach with seamless experience across all devices
+- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
+- **AI Product Showcases**: Detailed case studies of 5+ AI-powered products
+- **Interactive Navigation**: Sticky header with smooth scrolling to sections
+- **Resource Library**: Curated articles and classes on AI, product management, and tech
+- **SEO Optimized**: Meta tags, semantic HTML, and optimized content structure
+- **Performance**: Fast loading with optimized assets and minimal dependencies
+- **Analytics**: Google Tag Manager integration for tracking and insights
+
+## 🛠 Tech Stack
+
+- **HTML5**: Semantic markup with accessibility features
+- **CSS3**: Custom properties, Grid, Flexbox, animations
+- **JavaScript**: Vanilla JS for interactive navigation
+- **Fonts**: Inter font family from Google Fonts
+- **Analytics**: Google Tag Manager (GTM-TVDMFNM)
+- **Hosting**: GitHub Pages
+
+## 📁 Project Structure
+
+```
+adrianaurrego.github.io/
+├── Index.html                    # Main landing page
+├── css/
+│   ├── estilos.css              # Main stylesheet
+│   └── estilos_header.css       # Header-specific styles
+├── js/
+│   └── main.js                  # Navigation and interactive features
+├── Images/                       # Project images and assets
+│   ├── Hero.jpeg                # Profile photo
+│   └── Favicon.PNG              # Site favicon
+├── fonts/                        # Custom font files
+├── exams-detail.html            # AI Assessment System case study
+├── explainer-detail.html        # AI Assistant case study
+├── placement-test-detail.html   # English Proficiency Test case study
+├── platzi-learn-detail.html     # AI Course Generator case study
+├── search-detail.html           # AI-Powered Search case study
+└── README.md                    # Project documentation
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Python 3.x (for local development server)
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AdrianaUrrego/adrianaurrego.github.io.git
+   cd adrianaurrego.github.io
+   ```
+
+2. **Start a local server**
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+3. **Open in browser**
+   ```
+   http://localhost:8000/Index.html
+   ```
+
+### Alternative Local Server Options
+
+**Using Node.js:**
+```bash
+npx http-server
+```
+
+**Using PHP:**
+```bash
+php -S localhost:8000
+```
+
+## 📦 Deployment
+
+The site is automatically deployed via GitHub Pages:
+
+1. Push changes to the `master` branch
+2. GitHub Pages automatically builds and deploys
+3. Changes are live within minutes
+
+**Custom Domain Setup:**
+- Configure DNS to point to GitHub Pages
+- Add CNAME file in repository root
+- Enable HTTPS in repository settings
+
+## 🎯 Featured Products
+
+### Platzi Learn V1
+AI-powered course generator that transforms company documentation into structured courses with AI-narrated lessons and assessments.
+
+### Placement Test
+Adaptive English proficiency test using AI to evaluate skills and provide personalized learning recommendations.
+
+### AI Search
+Personalized course search using vector databases to surface the most relevant learning content.
+
+### Exams System
+Auto-generates question banks and evaluates open responses with real-time gamified feedback.
+
+### Explainer V1 & V2
+AI assistant providing immediate answers to student questions within the learning interface.
+
+## 📝 Recent Articles & Classes
+
+- **Mathematical Foundations of AI**: Deep dive into how language models work
+- **Starting Your First AI Project**: Practical guide to becoming AI Native
+- **DeepSeek R1 Analysis**: Why it outperforms GPT-o1
+- **The Non-Traditional Path**: Personal blog on product management and lifestyle
+
+## 🎨 Design System
+
+### Colors
+- Primary: `#000000` (Black)
+- Text: `#1a1a1a` (Dark Gray)
+- Muted: `#6b7280` (Medium Gray)
+- Background: `#f5f5f5` (Light Gray)
+- Accent: `#3b82f6` (Blue)
+
+### Typography
+- Font Family: Inter
+- Base Size: 16px
+- Responsive scaling for headings
+
+### Spacing
+- Based on 8px grid system
+- Consistent padding and margins
+- Responsive breakpoints at 768px and 991px
+
+## 🧪 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📊 Analytics
+
+The site uses Google Tag Manager for tracking:
+- Page views
+- User interactions
+- Conversion events
+- Custom dimensions
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and feedback are welcome:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -m 'Add improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 📄 License
+
+© 2026 Adriana Urrego. All rights reserved.
+
+This project is for portfolio demonstration purposes. Content and design are proprietary.
+
+## 📫 Contact
+
+- **Email**: aurregom@gmail.com
+- **LinkedIn**: [linkedin.com/in/adriurrego](https://www.linkedin.com/in/adriurrego/)
+- **Blog**: [adrianaurrego.substack.com](https://adrianaurrego.substack.com/)
+- **Portfolio**: [adrianaurrego.github.io](https://adrianaurrego.github.io)
+
+## 🙏 Acknowledgments
+
+- Designed and developed with [Claude Code](https://claude.com/claude-code)
+- Fonts by [Google Fonts](https://fonts.google.com/)
+- Icons: Custom SVG design
+- Hosted on [GitHub Pages](https://pages.github.com/)
+
+---
+
+**Built with dedication in Vancouver, Canada** 🇨🇦
