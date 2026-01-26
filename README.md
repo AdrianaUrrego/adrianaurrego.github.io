@@ -50,56 +50,6 @@ adrianaurrego.github.io/
 └── README.md                    # Project documentation
 ```
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Python 3.x (for local development server)
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/AdrianaUrrego/adrianaurrego.github.io.git
-   cd adrianaurrego.github.io
-   ```
-
-2. **Start a local server**
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-3. **Open in browser**
-   ```
-   http://localhost:8000/Index.html
-   ```
-
-### Alternative Local Server Options
-
-**Using Node.js:**
-```bash
-npx http-server
-```
-
-**Using PHP:**
-```bash
-php -S localhost:8000
-```
-
-## 📦 Deployment
-
-The site is automatically deployed via GitHub Pages:
-
-1. Push changes to the `master` branch
-2. GitHub Pages automatically builds and deploys
-3. Changes are live within minutes
-
-**Custom Domain Setup:**
-- Configure DNS to point to GitHub Pages
-- Add CNAME file in repository root
-- Enable HTTPS in repository settings
-
 ## 🎯 Featured Products
 
 ### Platzi Learn V1
@@ -158,16 +108,6 @@ The site uses Google Tag Manager for tracking:
 - User interactions
 - Conversion events
 - Custom dimensions
-
-## 🤝 Contributing
-
-This is a personal portfolio project, but suggestions and feedback are welcome:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'Add improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
 
 ## 📄 License
 
