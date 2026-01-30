@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVDMFNM');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealthsimple Growth Platform - Case Study | Adriana Urrego</title>
+    <link rel="icon" type="image.png" href="Images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8ecf1;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b6b6b;
+            --text-muted: #9b9b9b;
+            --accent-primary: #2d2d2d;
+            --accent-blue: #4a7dff;
+            --accent-green: #10b981;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 900px;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .context-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 6px;
+            color: #0369a1;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .card-grid .info-card,
+        .card-grid .principle-card {
+            flex: 1 1 300px;
+            max-width: 380px;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card h3,
+        .info-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .info-card ul {
+            margin: 0.8rem 0 0 0;
+            padding-left: 1.2rem;
+        }
+
+        .info-card li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Principle Cards */
+        .principle-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(74, 125, 255, 0.15);
+        }
+
+        .principle-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .principle-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .principle-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Capability Cards */
+        .capability-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .capability-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .capability-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .capability-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .capability-card li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .capability-card strong {
+            color: var(--text-primary);
+        }
+
+        .ai-enhancement {
+            background: #fef3c7;
+            border-left: 3px solid #f59e0b;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        .ai-enhancement-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #b45309;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-enhancement p {
+            color: #78350f;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Two-Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .column-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .column-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .column-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .decision-filter {
+            background: #f0fdf4;
+            border-left: 3px solid var(--accent-green);
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        .decision-filter-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #15803d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .decision-filter p {
+            color: #166534;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Timeline Cards */
+        .timeline-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .timeline-grid .timeline-card {
+            flex: 1 1 280px;
+            max-width: 380px;
+        }
+
+        .timeline-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-blue), var(--accent-green));
+        }
+
+        .timeline-period {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .timeline-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .timeline-card ul {
+            margin: 0.8rem 0 0 0;
+            padding-left: 1.2rem;
+        }
+
+        .timeline-card li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .quote-subtext {
+            font-size: 1rem;
+            color: #9b9b9b;
+            line-height: 1.6;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            color: #78350f;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .highlight-box strong {
+            color: #451a03;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--accent-primary);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 6rem;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            color: rgba(255, 255, 255, 0.7);
+            transform: translateX(4px);
+        }
+
+        .contact-item svg {
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        @media (max-width: 991px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .quote-text {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem 2rem;
+            }
+
+            .content-section {
+                padding: 0 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-title {
+                font-size: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVDMFNM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav>
+        <div class="nav-content">
+            <a href="Index.html" class="nav-logo">Adriana Urrego</a>
+            
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>The Growth Platform for Wealthsimple's Big-Bet Campaigns</h1>
+        <p class="subtitle">Building repeatable infrastructure that enables bold, culturally resonant campaigns to launch in weeks, not months—while maintaining the trust and simplicity clients expect.</p>
+        
+    </div>
+
+    <!-- The Challenge -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">01 — The Challenge</span>
+            <h2>When Speed Becomes Unpredictable</h2>
+            <p class="section-description">
+                Wealthsimple's growth doesn't come from incrementally optimizing button colors or email subject lines. It comes from bold, culturally resonant campaigns—the home giveaway, the Supreme collaboration, the visceral "Investing for Humans" stories.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h4>Custom Infrastructure Every Time</h4>
+                <p>Every big-bet campaign requires significant custom engineering, operational coordination, and cross-functional heroics.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Learning Compounds Slowly</h4>
+                <p>What worked for one promotion doesn't easily translate to the next. Teams rebuild eligibility logic, recreate communication sequences, and manually track results.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Demand Will Only Intensify</h4>
+                <p>As Wealthsimple scales its product portfolio and audience, the need for these campaigns will grow—but the infrastructure won't keep up without systematic change.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>The opportunity:</strong> Build a growth platform that makes big-bet campaigns repeatable—enabling the creativity and speed that define Wealthsimple, while maintaining the trust and simplicity clients expect.</p>
+        </div>
+    </section>
+
+    <!-- Why This Matters Now -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">02 — Strategic Context</span>
+            <h2>Growth in the AI Era</h2>
+            <p class="section-description">
+                Traditional growth platforms were built for A/B testing and email automation. The AI era demands something different: platforms that learn, adapt, and compound insights automatically.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h4>Leverage AI for Pattern Recognition</h4>
+                <p>Not just reporting. What worked in the iPhone campaign that could inform the mortgage launch? AI identifies transferable insights across campaigns.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Automate Insight Generation</h4>
+                <p>Teams should spend time on strategy, not spreadsheets. The platform should automatically surface what's working and why.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Enable Rapid Experimentation</h4>
+                <p>AI-assisted copy generation, audience segmentation, and predictive modeling accelerate iteration speed.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Focus on Retention from Day One</h4>
+                <p>Acquisition means nothing if clients don't stick around. The platform must track long-term impact, not just initial conversions.</p>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            <p class="quote-text">Efficient growth isn't about doing more—it's about building systems where each action improves the next.</p>
+            <!--p class="quote-subtext">The platform itself becomes a learning system, getting smarter with each campaign.</p-->
+        </div>
+    </section>
+
+    <!-- Framework Built from Experience -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">03 — Experience</span>
+            <h2>A Framework Built from Solving This Before</h2>
+            <p class="section-description">
+                At Platzi, each campaign was created from scratch. Launch timelines stretched, learnings stayed trapped in individual heads, and we repeatedly solved the same problems. That's why I built a campaign framework that transformed how we worked.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h4>Campaign Launch Time</h4>
+                <p>Went from <strong>4-6 weeks to 1-2 weeks</strong> by standardizing configuration and removing repeated infrastructure work.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Cross-Team Coordination</h4>
+                <p>Shifted from constant meetings to asynchronous configuration, freeing teams to focus on strategic decisions.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Institutional Learning</h4>
+                <p>Insights from one campaign automatically informed the next through structured templates and documentation.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Quality at Scale</h4>
+                <p>Quality stayed high even as volume increased, because the system embedded best practices by default.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>The lesson:</strong> The best growth infrastructure doesn't replace human creativity—it removes friction so teams can focus on the strategic bets that matter.</p>
+        </div>
+    </section>
+
+    <!-- Five Principles -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">04 — Design Principles</span>
+            <h2>Five Principles for a Big-Bet Growth Platform</h2>
+            <p class="section-description">
+                The platform needs to embody Wealthsimple's culture and make the right decisions obvious.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="principle-card">
+                <div class="principle-number">1</div>
+                <h4>Default to Clarity Over Cleverness</h4>
+                <p>Every campaign element should be immediately understandable to both clients and the team configuring it. Keep It Simple in practice.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-number">2</div>
+                <h4>Make Trust Non-Negotiable</h4>
+                <p>Clients need to know exactly what they'll get, when they'll get it, and what they need to do. Trust isn't a feature—it's a constraint.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-number">3</div>
+                <h4>Optimize for Learning Velocity, Not Perfection</h4>
+                <p>Every campaign should automatically generate insights that inform the next one. Ship fast, then improve with institutional memory.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-number">4</div>
+                <h4>Enable Creative Freedom Within Guardrails</h4>
+                <p>Marketers shouldn't need engineers to test new messaging or adjust incentives. But they also shouldn't be able to accidentally break compliance or create confusion.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-number">5</div>
+                <h4>Compose, Don't Customize</h4>
+                <p>Instead of building each campaign from scratch, teams assemble them from proven components. Different campaigns might share eligibility logic even if they feel completely different to clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Platform Capabilities -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">05 — Platform Capabilities</span>
+            <h2>Core Platform Capabilities</h2>
+            <p class="section-description">
+                Four foundational systems that power all campaigns, with AI enhancements woven throughout.
+            </p>
+        </div>
+
+        <div class="capability-card">
+            <h4>1. Campaign Configuration Engine</h4>
+            <p>Every campaign is fundamentally a set of rules: If a client does X, they qualify for Y, which they'll receive after Z.</p>
+            <p>The platform enables teams to define:</p>
+            <ul>
+                <li><strong>Eligibility criteria</strong> that compose like boolean logic—simple individually, powerful in combination</li>
+                <li><strong>Incentive structures</strong> with consistent configuration across cash bonuses, product access, physical rewards, and service upgrades</li>
+                <li><strong>Holding periods & milestones</strong> with automatic state tracking</li>
+                <li><strong>Capacity & budget controls</strong> to prevent runaway costs</li>
+            </ul>
+            <div class="ai-enhancement">
+                <div class="ai-enhancement-label">AI Enhancement</div>
+                <p>Natural language configuration ("clients who transferred $5K+ in the last 30 days") that translates to precise logic. AI-suggested audience expansions based on historical campaign performance.</p>
+            </div>
+        </div>
+
+        <div class="capability-card">
+            <h4>2. Multi-Channel Orchestration</h4>
+            <p>Big campaigns reach clients across email, in-app notifications, push, and physical mail. But orchestration isn't broadcast—it's context-aware communication.</p>
+            <ul>
+                <li><strong>Journey mapping</strong> that adapts based on client actions and engagement patterns</li>
+                <li><strong>Channel prioritization</strong> using historical data to predict highest-impact touchpoints</li>
+                <li><strong>Frequency capping</strong> that prevents notification fatigue while ensuring critical updates break through</li>
+                <li><strong>Message personalization</strong> with dynamic content and clear fallbacks</li>
+            </ul>
+            <div class="ai-enhancement">
+                <div class="ai-enhancement-label">AI Enhancement</div>
+                <p>LLM-powered copy generation that maintains brand voice across channels. Predictive send-time optimization. Automated message variant creation for testing.</p>
+            </div>
+        </div>
+
+        <div class="capability-card">
+            <h4>3. Trust & Clarity Guardrails</h4>
+            <p>Campaigns can be bold without being confusing. The platform enforces clarity at the configuration stage:</p>
+            <ul>
+                <li><strong>Plain-language summaries</strong> auto-generated from campaign logic—if it's confusing to the team, it's definitely confusing to clients</li>
+                <li><strong>Progress visibility</strong> built into every campaign by default (Am I eligible? What's left? When do I get my reward?)</li>
+                <li><strong>Error recovery paths</strong> defined upfront for edge cases</li>
+                <li><strong>Regulatory review triggers</strong> for certain incentive types or claim language</li>
+            </ul>
+            <div class="ai-enhancement">
+                <div class="ai-enhancement-label">AI Enhancement</div>
+                <p>Automated clarity scoring for campaign terms. AI-generated FAQ predictions based on campaign structure. Proactive identification of potentially confusing edge cases.</p>
+            </div>
+        </div>
+
+        <div class="capability-card">
+            <h4>4. Measurement & Learning Loops</h4>
+            <p>The platform tracks both short-term performance and long-term impact:</p>
+            <p><strong>Real-time metrics:</strong></p>
+            <ul>
+                <li>Enrollment rate, completion rate, cost per acquisition</li>
+                <li>Channel performance, drop-off points, issue detection</li>
+                <li>Live dashboards that surface problems before they become crises</li>
+            </ul>
+            <p><strong>Post-campaign insights:</strong></p>
+            <ul>
+                <li>Cohort retention, lifetime value impact, product cross-adoption</li>
+                <li>Incrementality testing (what worked vs. what was just lucky?)</li>
+                <li>Qualitative signals and surprise discoveries</li>
+            </ul>
+            <div class="ai-enhancement">
+                <div class="ai-enhancement-label">AI Enhancement</div>
+                <p>Automated anomaly detection during campaigns. Natural language insights generation ("retention was 23% higher in the 25-34 age group, likely because..."). Predictive modeling for future campaign design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tradeoffs -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">06 — Decision Framework</span>
+            <h2>Tradeoffs & Decision Filters</h2>
+            <p class="section-description">
+                Building this platform means making conscious choices about standardization vs. flexibility. Here's how to navigate those tensions.
+            </p>
+        </div>
+
+        <div class="two-column">
+            <div class="column-card">
+                <h4>When Standardization Might Limit Creativity</h4>
+                <p>If the platform only supports three incentive types, what happens when marketing has a brilliant idea for a fourth?</p>
+                <div class="decision-filter">
+                    <div class="decision-filter-label">Decision Filter</div>
+                    <p>If a new campaign requires capabilities that 3+ future campaigns could use, build it into the platform. If it's truly one-off, prototype externally but document why.</p>
+                </div>
+            </div>
+
+            <div class="column-card">
+                <h4>When Flexibility Creates Risk</h4>
+                <p>If anyone can configure anything, teams will inevitably launch campaigns with unclear terms or broken fulfillment.</p>
+                <div class="decision-filter">
+                    <div class="decision-filter-label">Decision Filter</div>
+                    <p>Make common things easy and safe things mandatory. Copy variants don't need approval. Reward fulfillment timing absolutely does.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="column-card">
+                <h4>When Measurement Becomes Performative</h4>
+                <p>If teams track everything, they might optimize for vanity metrics that don't move the business.</p>
+                <div class="decision-filter">
+                    <div class="decision-filter-label">Decision Filter</div>
+                    <p>Default to three metrics per campaign: acquisition efficiency, client quality (retention proxy), and learning value (how surprising was the result?).</p>
+                </div>
+            </div>
+
+            <div class="column-card">
+                <h4>Build vs. Buy vs. Integrate</h4>
+                <p>Should we build custom or integrate with existing tools like Braze, Iterable, or Segment?</p>
+                <div class="decision-filter">
+                    <div class="decision-filter-label">Decision Filter</div>
+                    <p>Build what's strategically differentiating (campaign configuration, learning loops). Integrate where commoditized solutions exist (email delivery, analytics infrastructure).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI-Native Growth Operations -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">07 — AI-Native Operations</span>
+            <h2>How Teams Will Work Differently</h2>
+            <p class="section-description">
+                The platform fundamentally changes how growth teams operate, shifting from manual execution to strategic orchestration.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h4>Campaign Planning</h4>
+                <ul>
+                    <li>Upload past campaign performance → AI identifies successful patterns and suggests audience segments</li>
+                    <li>Natural language brief → Platform generates draft campaign structure, eligibility rules, and message flows</li>
+                    <li>Competitive analysis → AI summarizes how similar financial services run campaigns and identifies white space</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>Campaign Execution</h4>
+                <ul>
+                    <li>Platform auto-generates message variants optimized for different audience segments</li>
+                    <li>AI monitors performance in real-time and suggests in-flight optimizations</li>
+                    <li>Anomaly detection alerts teams to unexpected patterns (positive or negative)</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>Post-Campaign Learning</h4>
+                <ul>
+                    <li>AI generates structured insights document automatically</li>
+                    <li>Pattern recognition across campaigns: "Email-first journeys outperform push-first by 34% for campaigns with holding periods over 30 days"</li>
+                    <li>Recommendations for next campaign based on accumulated learnings</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>The human role shifts:</strong> Teams won't disappear—they'll focus on higher-leverage work. AI handles the repeatable, the analyzable, the pattern-matching. Humans handle the bold, the cultural, the judgment calls that define the brand.</p>
+        </div>
+    </section>
+
+    <!-- First 90 Days -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">08 — Implementation Plan</span>
+            <h2>First 90 Days: From Theory to Reality</h2>
+            <p class="section-description">
+                If I joined as PM for this platform, here's how I'd start.
+            </p>
+        </div>
+
+        <div class="timeline-grid">
+            <div class="timeline-card">
+                <div class="timeline-period">Weeks 1-3</div>
+                <h4>Forensic Reconstruction</h4>
+                <p>Map the most successful campaigns as the reference implementation. What systems touched them? What was manual? Where did things almost break? What was learned and immediately forgotten?</p>
+                <p>Create a journey map showing every decision point, system integration, and client touchpoint.</p>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-period">Weeks 4-6</div>
+                <h4>Design Sprint</h4>
+                <p>Run collaborative sessions with Marketing, Growth, Engineering, and Operations. The goal isn't consensus—it's clarity on the highest-leverage primitives.</p>
+                <p><strong>Key question:</strong> What are the 20% of capabilities that would enable 80% of campaign ideas?</p>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-period">Weeks 7-12</div>
+                <h4>Validate One Workflow End-to-End</h4>
+                <p>Pick the simplest conceptually complete campaign type—likely a referral incentive. Build just enough platform to configure, launch, and measure it without custom code.</p>
+                <p><strong>Success metrics:</strong></p>
+                <ul>
+                    <li>Campaign launches in &lt;5 days</li>
+                    <li>Post-campaign insights within 48 hours</li>
+                    <li>Marketing team can replicate it independently</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Now -->
+    <section class="content-section">
+        <div class="section-header">
+            <span class="section-label">09 — Strategic Urgency</span>
+            <h2>Why Now Is the Moment</h2>
+            <p class="section-description">
+                Wealthsimple is at an inflection point. The brand has proven it can create culturally resonant moments. The product portfolio is expanding rapidly. The market opportunity is massive.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <h4>Slower Time-to-Market</h4>
+                <p>Every month without a growth platform means campaign ideas launch in months instead of weeks.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Trapped Learnings</h4>
+                <p>Insights stay locked in individual memories instead of compounding systematically.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Technical Debt Accumulation</h4>
+                <p>Custom solutions for each campaign create long-term maintenance burden.</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Misallocated Creative Energy</h4>
+                <p>Teams spend time on logistics instead of strategic bets that differentiate the brand.</p>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            <p class="quote-text">The growth platform isn't just infrastructure—it's how Wealthsimple scales its competitive advantage.</p>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h2 class="footer-title">Let's make this plan a reallity.</h2>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:aurregom@gmail.com" class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4L10 11L17 4M3 4H17M3 4V16H17V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        aurregom@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/adriurrego/" target="_blank" class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H16C17.1 18 18 17.1 18 16V4C18 2.9 17.1 2 16 2ZM7 15H5V8H7V15ZM6 7C5.4 7 5 6.6 5 6C5 5.4 5.4 5 6 5C6.6 5 7 5.4 7 6C7 6.6 6.6 7 6 7ZM15 15H13V11.5C13 10.7 12.3 10 11.5 10C10.7 10 10 10.7 10 11.5V15H8V8H10V9C10.5 8.4 11.2 8 12 8C13.7 8 15 9.3 15 11V15Z" fill="currentColor"/>
+                        </svg>
+                        linkedin.com/in/adriurrego/
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed and developed with Claude Code</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
