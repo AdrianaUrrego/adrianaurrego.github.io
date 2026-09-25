@@ -22,9 +22,9 @@ This portfolio highlights 7+ years of experience in product management, speciali
 ## 🛠 Tech Stack
 
 - **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Custom properties, Grid, Flexbox, animations
+- **CSS3**: Custom properties, Grid, Flexbox, `clamp()`-based fluid type
 - **JavaScript**: Vanilla JS for interactive navigation
-- **Fonts**: Inter font family from Google Fonts
+- **Fonts**: Bricolage Grotesque (display) + Hanken Grotesk (body) from Google Fonts
 - **Analytics**: Google Tag Manager (GTM-TVDMFNM)
 - **Hosting**: GitHub Pages
 
@@ -34,19 +34,23 @@ This portfolio highlights 7+ years of experience in product management, speciali
 adrianaurrego.github.io/
 ├── Index.html                    # Main landing page
 ├── css/
-│   ├── estilos.css              # Main stylesheet
-│   └── estilos_header.css       # Header-specific styles
+│   ├── estilos.css              # Design tokens, base styles, home-page components
+│   └── case-study.css           # Shared components for the 7 case study pages
 ├── js/
-│   └── main.js                  # Navigation and interactive features
+│   └── main.js                  # Nav toggle, smooth scroll, active-link + fade-in
 ├── Images/                       # Project images and assets
 │   ├── Hero.jpeg                # Profile photo
-│   └── Favicon.PNG              # Site favicon
-├── fonts/                        # Custom font files
-├── exams-detail.html            # AI Assessment System case study
-├── explainer-detail.html        # AI Assistant case study
-├── placement-test-detail.html   # English Proficiency Test case study
-├── platzi-learn-detail.html     # AI Course Generator case study
-├── search-detail.html           # AI-Powered Search case study
+│   └── favicon.png              # Site favicon
+├── fonts/                        # Legacy font files (unused by the current design)
+├── case-studies/
+│   ├── platzi-learn-detail.html
+│   ├── placement-test-detail.html
+│   ├── search-detail.html
+│   ├── exams-detail.html
+│   ├── explainer-detail.html
+│   ├── onboarding-experiments-detail.html
+│   ├── cancellation-flow-detail.html
+│   └── wealthsimple.html        # Out of scope for the redesign; untouched
 └── README.md                    # Project documentation
 ```
 
@@ -76,22 +80,25 @@ AI assistant providing immediate answers to student questions within the learnin
 
 ## 🎨 Design System
 
+"2026 redesign" — warm off-white paper, near-black ink, big tightly-set display type, an acid-lime accent for **AI products** work and a magenta accent for **Growth** work. Tokens live in `css/estilos.css` under `:root`.
+
 ### Colors
-- Primary: `#000000` (Black)
-- Text: `#1a1a1a` (Dark Gray)
-- Muted: `#6b7280` (Medium Gray)
-- Background: `#f5f5f5` (Light Gray)
-- Accent: `#3b82f6` (Blue)
+- `--paper` `#F3F0E8` page background · `--ink` `#15130F` primary text / dark bands
+- `--panel-dark` `#1E1C17` screenshot stage · `--callout` `#E7E2D6` / `--callout-dark` `#2A2721`
+- `--text-2` / `--muted` on paper · `--text-2-dark` / `--muted-dark` on ink
+- `--ai` `#88EE11` (lime — **only** for AI product accents) · `--growth` `#C8175F` / `--growth-dark` `#FF4F93` (magenta — **only** for Growth accents)
 
 ### Typography
-- Font Family: Inter
-- Base Size: 16px
-- Responsive scaling for headings
+- Display: **Bricolage Grotesque** · Body: **Hanken Grotesk**
+- Type scales fluidly with `clamp()` between a 390px and a 1440px reference size via the `.fluid` utility class plus per-role classes (`.h1-home`, `.h2-case`, `.step-num`, `.num`, etc. — see `css/estilos.css`)
 
-### Spacing
-- Based on 8px grid system
-- Consistent padding and margins
-- Responsive breakpoints at 768px and 991px
+### Layout
+- 12-column grid, `24px` gutter, `1280px` max content width, `80px` side margin at desktop (`20px` on mobile)
+- Grid placement (`grid-column`) is set inline per element, mirroring the approved design comps in `redesign-handoff/reference/`
+- Breakpoints: `≤1024px` cramped/6-col, `≤767px` stacked single column, `≤640px` mobile margins/spacing
+
+### Components
+Header/nav, buttons, section headers, AI product cards, the Growth band, the teaching list, and the case-study template (hero, impact band, problem cards, feature grid, step rows, callouts, key learnings, next-case footer) are all documented inline in `css/estilos.css` and `css/case-study.css`.
 
 ## 🧪 Browser Support
 

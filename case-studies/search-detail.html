@@ -8,348 +8,17 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TVDMFNM');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="description" content="AI-powered course search: personalized, vector-based search that surfaces the most relevant learning content from 1,900+ courses.">
+    <meta name="robots" content="index,follow">
+    <title>AI-Powered Course Search — Case study — Adriana Urrego</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Course Search - Case Study | Adriana Urrego</title>
     <link rel="icon" type="image.png" href="../Images/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-primary: #f5f5f5;
-            --bg-secondary: #ffffff;
-            --bg-tertiary: #e8ecf1;
-            --text-primary: #1a1a1a;
-            --text-secondary: #6b6b6b;
-            --text-muted: #9b9b9b;
-            --accent-primary: #2d2d2d;
-            --accent-blue: #4a7dff;
-            --border-color: #e0e0e0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 1.5rem 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .nav-back {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-back:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 100px;
-            padding: 4rem 2rem 3rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 4rem;
-        }
-
-        .project-tag {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-            color: var(--text-primary);
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            max-width: 800px;
-            line-height: 1.7;
-        }
-
-        /* Content Sections */
-        .content-section {
-            max-width: 1200px;
-            margin: 0 auto 6rem;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
-        .section-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1rem;
-            display: block;
-            font-weight: 600;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            max-width: 800px;
-        }
-
-        /* Problem/Solution Cards */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .info-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .info-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .info-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .info-card p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        /* Flow Section with alternating layout */
-        .flow-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-bottom: 4rem;
-        }
-
-        .flow-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .flow-item.reverse {
-            direction: rtl;
-        }
-
-        .flow-item.reverse > * {
-            direction: ltr;
-        }
-
-        .flow-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .flow-content p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .flow-image {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 3rem;
-            text-align: center;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .flow-image p {
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        .flow-image span {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            display: block;
-        }
-
-        /* Step Image Wrapper */
-        .step-image-wrapper {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 100%;
-        }
-
-        .step-image-wrapper:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .step-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border: 1px solid var(--border-color);
-            max-height: 500px;
-            object-fit: contain;
-        }
-
-        /* Results Section */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        /* Footer */
-        footer {
-            max-width: 1200px;
-            margin: 6rem auto 2rem;
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .next-project {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--text-primary);
-            border: none;
-            border-radius: 6px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .next-project:hover {
-            background: var(--accent-blue);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .flow-item,
-            .flow-item.reverse {
-                grid-template-columns: 1fr;
-                direction: ltr;
-            }
-
-            .flow-item.reverse > * {
-                direction: ltr;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/case-study.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -357,235 +26,175 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <nav>
-        <div class="nav-content">
-            <a href="../Index.html" class="nav-logo">Adriana Urrego</a>
-            <a href="../Index.html#work" class="nav-back">← Back to Work</a>
+    <header class="site-header">
+        <a href="../Index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span class="brand-name">Adriana Urrego</span>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="primary-nav" id="nav-menu" aria-label="Case study">
+            <a href="../Index.html" class="nav-link">← All work</a>
+            <a href="mailto:aurregom@gmail.com" class="btn btn-solid nav-link">Get in touch</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid12 case-hero">
+            <span class="case-eyebrow"><span class="sq sq-ai" aria-hidden="true"></span>AI products · 03 of 07</span>
+            <h1 class="case-h1 h1-case fluid">AI-powered course search</h1>
+            <p class="case-lead lead fluid">Personalized search using vector databases and student data to surface the most relevant learning content from 1,900+ courses.</p>
+            <div class="case-meta">
+                <span class="case-meta-row"><span>Company</span><span>Platzi</span></span>
+                <span class="case-meta-row"><span>Role</span><span>Senior Product Manager</span></span>
+                <span class="case-meta-row"><span>Product</span><span>Search &amp; discovery</span></span>
+            </div>
+        </section>
+
+        <section class="grid12 impact-band">
+            <div class="section-head">
+                <span class="eyebrow">Impact</span>
+                <h2 class="h2-dark fluid">Search people actually click</h2>
+            </div>
+            <p class="lead-sm fluid">The new search system dramatically improved discoverability and engagement across the platform.</p>
+            <div class="stat-grid" style="--stat-cols:3">
+                <div class="stat"><span class="num fluid accent" style="--fmin:64;--fmax:120">+10pp</span><span class="stat-caption">Click-through rate on the top 3 results</span></div>
+                <div class="stat"><span class="num fluid" style="--fmin:64;--fmax:120">5,000+</span><span class="stat-caption">Pieces of content searchable with semantic understanding</span></div>
+                <div class="stat"><span class="num fluid" style="--fmin:64;--fmax:120">18K</span><span class="stat-caption">Daily searches from 8K students — one of the most used tools</span></div>
+            </div>
+        </section>
+
+        <section class="grid12 case-section">
+            <div class="section-head">
+                <span class="eyebrow" style="color:var(--muted)">01 — Problem</span>
+                <h2 class="h2-case fluid">Search that couldn’t find what students needed</h2>
+            </div>
+            <div class="gi stat-pair" style="align-self:end">
+                <div class="stat-pair-item"><span class="num fluid">40%+</span><span class="stat-pair-caption">of search results received zero clicks</span></div>
+                <div class="stat-pair-item"><span class="num fluid">&lt;2%</span><span class="stat-pair-caption">of searches led to a course enrollment</span></div>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card"><span class="letter">A</span><span class="card-title-lg fluid">Low click-through</span><span class="body-lg fluid">Most results were irrelevant or unhelpful, and very few searches turned into enrollments.</span></div>
+                <div class="problem-card"><span class="letter">B</span><span class="card-title-lg fluid">Poor user experience</span><span class="body-lg fluid">Feedback described search as unintuitive and returning results that didn’t match what students were looking for.</span></div>
+                <div class="problem-card"><span class="letter">C</span><span class="card-title-lg fluid">Generic ranking</span><span class="body-lg fluid">No student context, history or preferences — everyone saw the same results regardless of their needs.</span></div>
+            </div>
+        </section>
+
+        <section class="grid12 case-section">
+            <div class="section-head">
+                <span class="eyebrow" style="color:var(--muted)">02 — Solution</span>
+                <h2 class="h2-case fluid">Intelligent, context-aware search</h2>
+            </div>
+            <p class="lead-sm fluid">We rebuilt search on vector databases combined with student behavioral data to deliver personalized, relevant results.</p>
+            <div class="feature-grid">
+                <div class="feature-item"><span class="feature-title fluid">Vector-based search</span><span class="body-lg fluid">All course content vectorized for semantic understanding beyond keyword matching.</span></div>
+                <div class="feature-item"><span class="feature-title fluid">Personalized ranking</span><span class="body-lg fluid">Viewing history weights results toward topics and formats each student already engages with.</span></div>
+                <div class="feature-item"><span class="feature-title fluid">Simplified interface</span><span class="body-lg fluid">A redesigned results page shows more content above the fold, so students scan and choose faster.</span></div>
+            </div>
+        </section>
+
+        <section class="grid12 case-section" style="padding-bottom:0">
+            <div class="section-head">
+                <span class="eyebrow" style="color:var(--muted)">03 — How it works</span>
+                <h2 class="h2-case fluid">Search system architecture</h2>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="step-row">
+                <div class="step-body">
+                    <span class="step-num fluid"><span class="step-num-mark">1</span></span>
+                    <span class="step-title fluid">Content vectorization</span>
+                    <span class="body-lg fluid">Every piece of content becomes a vector with certain characteristics having more weight. The index updates automatically when new content is available.</span>
+                </div>
+                <div class="step-media"><img src="../Images/search-vector-database.png" alt="Vector database diagram"></div>
+            </div>
+            <div class="step-row">
+                <div class="step-body">
+                    <span class="step-num fluid"><span class="step-num-mark">2</span></span>
+                    <span class="step-title fluid">Personalized query processing</span>
+                    <span class="body-lg fluid">Each query is combined with the courses a student viewed in recent months. Only results above a minimum relevance threshold appear, aligned with their trajectory.</span>
+                </div>
+                <div class="step-media"><img src="../Images/search-query-processing.png" alt="Query processing diagram"></div>
+            </div>
+            <div class="step-row">
+                <div class="step-body">
+                    <span class="step-num fluid"><span class="step-num-mark">3</span></span>
+                    <span class="step-title fluid">Intelligent re-ranking</span>
+                    <span class="body-lg fluid">Raw vector results are re-ranked with quality signals: relation to recently viewed content, recent launches, ratings and completion rates.</span>
+                </div>
+                <div class="step-media"><img src="../Images/search-ranking.png" alt="Re-ranked search results"></div>
+            </div>
+            <div class="step-row">
+                <div class="step-body">
+                    <span class="step-num fluid"><span class="step-num-mark">4</span></span>
+                    <span class="step-title fluid">Unified, scannable results</span>
+                    <span class="body-lg fluid">All content types in one clean layout with clear differentiation between courses, paths and more — less cognitive load, faster decisions.</span>
+                </div>
+                <div class="step-media"><img src="../Images/search-results-interface.png" alt="Simplified results interface"></div>
+            </div>
+        </section>
+
+        <section class="grid12 experiments-band">
+            <div class="section-head">
+                <span class="eyebrow">04 — Experimentation</span>
+                <h2 class="h2-dark fluid">Five tests, one metric: top-result CTR</h2>
+            </div>
+            <p class="lead-sm fluid">Every component was validated with an experiment before it shipped.</p>
+            <div class="experiments-list">
+                <div class="exp-row"><span class="exp-tag">T1</span><span class="exp-title-cell exp-title fluid">External vs. internal search</span><span class="exp-desc">Our vector-based system with personalization significantly outperformed a generic third-party tool.</span></div>
+                <div class="exp-row"><span class="exp-tag">T2</span><span class="exp-title-cell exp-title fluid">Vector content</span><span class="exp-desc">Adding module titles to vectors improved relevance without hurting performance.</span></div>
+                <div class="exp-row"><span class="exp-tag">T3</span><span class="exp-title-cell exp-title fluid">Title vector separation</span><span class="exp-desc">Dedicated title vectors improved precision on exact-match queries while keeping broad semantic search.</span></div>
+                <div class="exp-row"><span class="exp-tag">T4</span><span class="exp-title-cell exp-title fluid">Tag removal</span><span class="exp-desc">Removing noisy AI-generated tags from vectors actually improved result quality.</span></div>
+                <div class="exp-row"><span class="exp-tag">T5</span><span class="exp-title-cell exp-title fluid">Interface simplification</span><span class="exp-desc">A cleaner, more scannable layout increased CTR in the top two positions.</span></div>
+            </div>
+        </section>
+
+        <section class="learnings">
+            <div class="learnings-head">
+                <span class="eyebrow" style="color:var(--muted)">05 — Key learnings</span>
+                <h2 class="h2-case fluid">What I learned building this</h2>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">01</span>
+                <span class="learning-title-cell learning-title fluid">Context is everything</span>
+                <span class="learning-body body-lg fluid">Adding student behavioral data turned search from generic into personal.</span>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">02</span>
+                <span class="learning-title-cell learning-title fluid">Experiment relentlessly</span>
+                <span class="learning-body body-lg fluid">Structured A/B tests on each component revealed non-obvious improvements that assumptions would have missed.</span>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">03</span>
+                <span class="learning-title-cell learning-title fluid">Simplicity wins</span>
+                <span class="learning-body body-lg fluid">Both the architecture and the interface got better by simplifying rather than adding complexity.</span>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">04</span>
+                <span class="learning-title-cell learning-title fluid">Invest in high-traffic features</span>
+                <span class="learning-body body-lg fluid">Prioritizing heavily used features yields the best return on product development effort.</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="next-footer">
+        <a href="exams-detail.html" class="next-link">
+            <span class="next-label">Next case study · 04</span>
+            <span class="next-title-row">
+                <span class="h2-next fluid">Exams</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0l-5-5m5 5l-5 5" stroke="var(--ai)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+        </a>
+        <div class="next-footer-meta">
+            <span>© 2026 Adriana Urrego</span>
+            <a href="../Index.html">← All work</a>
+            <a href="mailto:aurregom@gmail.com">aurregom@gmail.com</a>
         </div>
-    </nav>
-
-    <div class="hero">        
-        <h1>AI-Powered Course Search</h1>
-        <p class="subtitle">Personalized search using vector databases and student data to surface the most relevant learning content from 1,900+ courses.</p>
-    </div>
-
-    <!-- Problem Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">01 — Problem</span>
-            <h2>Search That Couldn't Find What Students Needed</h2>
-            <p class="section-description">
-                With 18K daily searches from 8K students, the search feature was one of the most used tools, yet it was failing users.
-            </p>
-        </div>
-
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>Low Click-Through Rates</h3>
-                <p>Over 40% of search results received zero clicks, indicating irrelevant or unhelpful recommendations. Less than 2% of searches led to course enrollment.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Poor User Experience</h3>
-                <p>User feedback revealed the search was unintuitive, difficult to use, and often returned results that didn't match what students were actually looking for.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Generic Ranking</h3>
-                <p>The existing system didn't consider student context, learning history, or preferences. Everyone saw the same results regardless of their needs.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">02 — Solution</span>
-            <h2>Intelligent, Context-Aware Search</h2>
-            <p class="section-description">
-                Rebuilt the search system using vector databases combined with student behavioral data to deliver personalized, relevant results.
-            </p>
-        </div>
-
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>Vector-Based Search</h3>
-                <p>Vectorized all course content to enable semantic understanding beyond simple keyword matching.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Personalized Ranking</h3>
-                <p>Incorporated student viewing history, weighting results toward topics and formats they've engaged with previously.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Simplified Interface</h3>
-                <p>Redesigned the results page to show more content above the fold, allowing students to quickly scan and select what they need.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">03 — How It Works</span>
-            <h2>Search System Architecture</h2>
-        </div>
-
-        <div class="flow-item">
-            <div class="flow-content">
-                <h3>Content Vectorization</h3>
-                <p>
-                    All platform content is converted into vector representations stored in a specialized database. For courses, we create separate vectors for titles and full content—this dual approach improves relevance by giving more weight to exact title matches while still capturing semantic meaning from descriptions and modules.
-                </p>
-                <p>
-                    This vectorization happens automatically whenever new content is published, keeping the search index current without manual updates.
-                </p>
-            </div>
-            <div class="step-image-wrapper">
-                <img src="../Images/search-vector-database.png" alt="Vector database structure" class="step-image">
-            </div>
-        </div>
-
-        <div class="flow-item reverse">
-            <div class="flow-content">
-                <h3>Personalized Query Processing</h3>
-                <p>
-                    When a student searches, we combine their query with context about courses they've viewed in the past months. The vector database returns results above a minimum relevance threshold, ensuring only meaningful matches appear.
-                </p>
-                <p>
-                    This personalization helps surface content aligned with their current learning trajectory while still allowing discovery of new topics.
-                </p>
-            </div>
-            <div class="step-image-wrapper">
-                <img src="../Images/search-query-processing.png" alt="Query and context analysis" class="step-image">
-            </div>
-        </div>
-
-        <div class="flow-item">
-            <div class="flow-content">
-                <h3>Intelligent Re-Ranking</h3>
-                <p>
-                    Raw vector search results are re-ranked using multiple quality signals. Courses get bonus points if they relate to recently viewed content, have recent launch dates, or have higher student ratings and completion rates.
-                </p>
-                <p>
-                    This mathematical reweighting ensures the final results balance relevance with quality, showing students the best matches first.
-                </p>
-            </div>
-            <div class="step-image-wrapper">
-                <img src="../Images/search-ranking.png" alt="Multi-factor ranking system" class="step-image">
-            </div>
-        </div>
-
-        <div class="flow-item reverse">
-            <div class="flow-content">
-                <h3>Unified, Scannable Results</h3>
-                <p>
-                    The redesigned interface displays all content types in a clean, easy-to-scan layout optimized for quick decision-making. Students see more results above the fold, with clear visual differentiation between courses, paths, and other content.
-                </p>
-                <p>
-                    This simplified design reduced cognitive load and made it easier for students to find and act on relevant content.
-                </p>
-            </div>
-            <div class="step-image-wrapper">
-                <img src="../Images/search-results-interface.png" alt="Search results interface" class="step-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- Experimentation Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">04 — Experimentation & Iteration</span>
-            <h2>Data-Driven Optimization</h2>
-            <p class="section-description">
-                We ran multiple experiments to optimize each component, measuring CTR on top results to validate improvements.
-            </p>
-        </div>
-
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>External vs. Internal Search</h3>
-                <p>Compared third-party search against custom vector-based system. The internal solution with personalization significantly outperformed generic external tools.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Vector Content Optimization</h3>
-                <p>Tested including module titles in vectors versus just descriptions and titles. More detailed vectors improved relevance without sacrificing performance.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Title Vector Separation</h3>
-                <p>Created dedicated vectors for course titles to give them more weight. This improved precision for exact-match queries while maintaining broad semantic search.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Tag Removal Test</h3>
-                <p>Experimented with removing AI-generated tags from vectors. Cleaner data without noisy tags actually improved result quality and relevance.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Interface Simplification</h3>
-                <p>A/B tested a simplified results layout against the original. The cleaner design increased top-2 position CTR by showing more scannable content.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">05 — Impact</span>
-            <h2>Measurable Improvement</h2>
-            <p class="section-description">
-                The new search system dramatically improved discoverability and engagement across the platform.
-            </p>
-        </div>
-
-        <div class="results-grid">
-            <div class="stat-card">
-                <div class="stat-number">+10pp</div>
-                <div class="stat-label">Increase in CTR for top 3 search results</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number">5,000+</div>
-                <div class="stat-label">Pieces of content searchable with semantic understanding</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Learnings Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">06 — Key Learnings</span>
-            <h2>What I Learned Building This</h2>
-        </div>
-
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>Context is Everything</h3>
-                <p>Adding student behavioral data transformed search from generic to personal.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Experiment Relentlessly</h3>
-                <p>Running structured A/B tests on each component revealed non-obvious improvements that assumption-based development would have missed.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Simplicity Wins</h3>
-                <p>Both the technical architecture and the interface benefited from simplification over added complexity.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>High-Traffic Features Deserve Investment</h3>
-                <p>Prioritizing heavily-used features yields the best return on product development effort.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <a href="exams-detail.html" class="next-project">Next product →</a>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
