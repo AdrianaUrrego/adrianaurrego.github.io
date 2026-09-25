@@ -366,6 +366,7 @@ a:hover {
     .hero-side { grid-column: auto; padding-bottom: 0; }
     .hero-actions { flex-direction: row; }
     .hero-actions .btn { flex-grow: 1; justify-content: center; }
+    .lg-break { display: none; }
 }
 
 /* ==========================================================================
