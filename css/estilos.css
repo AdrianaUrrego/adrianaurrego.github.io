@@ -374,6 +374,23 @@ section {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
+.work-card-content {
+    display: block;
+    text-decoration: none !important;
+    color: inherit;
+    cursor: pointer;
+}
+
+.work-card-content:hover,
+.work-card-content:focus,
+.work-card-content:active {
+    text-decoration: none !important;
+}
+
+.work-card-content * {
+    text-decoration: none !important;
+}
+
 .work-card-header {
     margin-bottom: var(--spacing-lg);
 }
@@ -381,8 +398,9 @@ section {
 .work-card-title {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     margin-bottom: var(--spacing-xs);
+    text-decoration: none !important;
 }
 
 .work-card-label {
@@ -392,9 +410,10 @@ section {
 
 .work-card-description {
     font-size: var(--font-size-base);
-    color: var(--color-text);
+    color: var(--color-text) !important;
     line-height: 1.7;
     margin-bottom: var(--spacing-lg);
+    text-decoration: none !important;
 }
 
 .work-card-link {
