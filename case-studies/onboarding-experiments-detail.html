@@ -8,392 +8,17 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TVDMFNM');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Onboarding experiments: three growth experiments that doubled Weekly Active Students through mission-based onboarding.">
+    <meta name="robots" content="index,follow">
+    <title>Onboarding Experiments — Case study — Adriana Urrego</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onboarding Experiments - Case Study | Adriana Urrego</title>
     <link rel="icon" type="image.png" href="../Images/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-primary: #f5f5f5;
-            --bg-secondary: #ffffff;
-            --bg-tertiary: #e8ecf1;
-            --text-primary: #1a1a1a;
-            --text-secondary: #6b6b6b;
-            --text-muted: #9b9b9b;
-            --accent-primary: #2d2d2d;
-            --accent-blue: #4a7dff;
-            --border-color: #e0e0e0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 1.5rem 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .nav-back {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-back:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 100px;
-            padding: 4rem 2rem 3rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 4rem;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-            color: var(--text-primary);
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            max-width: 800px;
-            line-height: 1.7;
-        }
-
-        /* Content Sections */
-        .content-section {
-            max-width: 1200px;
-            margin: 0 auto 6rem;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
-        .section-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1rem;
-            display: block;
-            font-weight: 600;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            max-width: 800px;
-        }
-
-        /* Problem/Solution Cards */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .info-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .info-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .info-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .info-card p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        .info-card ul {
-            margin: 0;
-            padding-left: 1.2rem;
-        }
-
-        .info-card li {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Experiment Flow Layout */
-        .experiment-flow {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-            margin-bottom: 3rem;
-        }
-
-        .experiment-content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .experiment-image-wrapper {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 3rem;
-            text-align: center;
-            min-height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .experiment-image-wrapper:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .experiment-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            max-height: 400px;
-            object-fit: contain;
-        }
-
-        .experiment-placeholder {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .experiment-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .experiment-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-
-        .experiment-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--accent-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.8rem;
-        }
-
-        .experiment-box p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .experiment-box ul {
-            margin: 0.5rem 0 0 0;
-            padding-left: 1.2rem;
-        }
-
-        .experiment-box li {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .experiment-box strong {
-            color: var(--text-primary);
-        }
-
-        /* Learnings Cards */
-        .learnings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .learning-card {
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .learning-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .learning-card h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #0369a1;
-            margin-bottom: 0.8rem;
-        }
-
-        .learning-card p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* Results Section */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        /* Footer */
-        footer {
-            max-width: 1200px;
-            margin: 6rem auto 2rem;
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .next-project {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--text-primary);
-            border: none;
-            border-radius: 6px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .next-project:hover {
-            background: var(--accent-blue);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experiment-flow {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .learnings-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/case-study.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -401,277 +26,163 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <nav>
-        <div class="nav-content">
-            <a href="../Index.html" class="nav-logo">Adriana Urrego</a>
-            <a href="../Index.html#work" class="nav-back">← Back to Work</a>
-        </div>
-    </nav>
+    <header class="site-header">
+        <a href="../Index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span class="brand-name">Adriana Urrego</span>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="primary-nav" id="nav-menu" aria-label="Case study">
+            <a href="../Index.html" class="nav-link">← All work</a>
+            <a href="mailto:aurregom@gmail.com" class="btn btn-solid nav-link">Get in touch</a>
+        </nav>
+    </header>
 
-    <div class="hero">
-        <h1>Onboarding Experiments</h1>
-        <p class="subtitle">A series of growth experiments to help new students experience Platzi's value proposition and develop consistent study habits.</p>
-    </div>
-
-    <!-- Problem Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">01 — Problem</span>
-            <h2>Students Abandoning Before the Aha Moment</h2>
-            <p class="section-description">
-                More than 50% of students who registered each week abandoned the platform before experiencing Platzi's value proposition, causing the Weekly Active Students (WAS) metric to stagnate.
-            </p>
-        </div>
-
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>High Early Churn</h3>
-                <p>Over half of new registrations churned in their first week, never reaching the "aha moment" that would demonstrate Platzi's learning value.</p>
+    <main>
+        <section class="grid12 case-hero">
+            <span class="case-eyebrow"><span class="sq sq-growth" aria-hidden="true"></span>Growth · 06 of 07</span>
+            <h1 class="case-h1 h1-case fluid">Onboarding experiments</h1>
+            <p class="case-lead lead fluid">A series of growth experiments to help new students experience Platzi’s value and build consistent study habits.</p>
+            <div class="case-meta">
+                <span class="case-meta-row"><span>Company</span><span>Platzi</span></span>
+                <span class="case-meta-row"><span>Role</span><span>Senior Product Manager</span></span>
+                <span class="case-meta-row"><span>Metric</span><span>Weekly Active Students</span></span>
             </div>
+        </section>
 
-            <div class="info-card">
-                <h3>Stagnant Growth Metrics</h3>
-                <p>WAS—proven to correlate directly with conversion and retention rates—remained flat despite consistent weekly registrations.</p>
+        <div class="grid12 metric-strip">
+            <div class="metric-strip-body">
+                <span class="num-hero fluid" style="--fmin:120;--fmax:240;margin-left:-10px">2×</span>
+                <span class="metric-strip-caption">Growth in Weekly Active Students from mission-based onboarding</span>
             </div>
-
-            <div class="info-card">
-                <h3>Unclear Value Path</h3>
-                <p>Students struggled to navigate from registration to relevant content, taking too long to find what they were looking for.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">02 — Approach</span>
-            <h2>Iterative Experimentation</h2>
-            <p class="section-description">
-                We ran three sequential experiments, each building on learnings from the previous iteration to optimize the onboarding experience.
-            </p>
+            <div class="metric-strip-media"><img src="../Images/onboarding-mission-system.png" alt="Mission-based onboarding flow across three screens"></div>
         </div>
 
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>Data-Driven Iteration</h3>
-                <p>Each experiment was structured as an A/B or A/B/C test with clear hypotheses and measurable outcomes.</p>
+        <section class="grid12 case-section">
+            <div class="section-head">
+                <span class="eyebrow" style="color:var(--muted)">01 — Problem</span>
+                <h2 class="h2-case fluid">Students leaving before the aha moment</h2>
             </div>
+            <div class="gi big-stat-block">
+                <span class="num fluid" style="color:var(--growth)">50%+</span>
+                <span class="lead-sm fluid" style="color:var(--text-2)">of each week’s new registrations abandoned the platform before experiencing Platzi’s value, as a result Weekly Active Students stagnated.</span>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card"><span class="letter">A</span><span class="card-title-lg fluid">High early churn</span><span class="body-lg fluid">Over half of new students churned in their first week, never reaching the moment that shows Platzi’s learning value.</span></div>
+                <div class="problem-card"><span class="letter">B</span><span class="card-title-lg fluid">Stagnant growth metrics</span><span class="body-lg fluid">WAS — proven to correlate with conversion and retention — stayed flat despite steady weekly registrations.</span></div>
+                <div class="problem-card"><span class="letter">C</span><span class="card-title-lg fluid">Unclear path to value</span><span class="body-lg fluid">Students took too long to navigate from registration to relevant content.</span></div>
+            </div>
+        </section>
 
-            <div class="info-card">
-                <h3>User Research Integration</h3>
-                <p>Quantitative data was supplemented with qualitative interviews to understand why certain approaches succeeded or failed.</p>
+        <section class="grid12 case-section">
+            <div class="section-head">
+                <span class="eyebrow" style="color:var(--muted)">02 — Approach</span>
+                <h2 class="h2-case fluid">Three experiments, each built on the last</h2>
             </div>
+            <div class="gi change-list" style="align-self:end">
+                <div class="change-row"><span class="mini-title fluid term">Data-driven</span><span class="def body-lg fluid">A/B or A/B/C tests with clear hypotheses and measurable outcomes.</span></div>
+                <div class="change-row"><span class="mini-title fluid term">Research-informed</span><span class="def body-lg fluid">Qualitative interviews explained why approaches succeeded or failed.</span></div>
+                <div class="change-row"><span class="mini-title fluid term">Progressive</span><span class="def body-lg fluid">Each test’s learnings shaped the next, compounding improvements.</span></div>
+            </div>
+        </section>
 
-            <div class="info-card">
-                <h3>Progressive Refinement</h3>
-                <p>Learnings from each test informed the next experiment, creating a compounding improvement effect.</p>
+        <section class="grid12 iteration">
+            <div class="iteration-head">
+                <span class="h2-next fluid" style="--fmin:36;--fmax:72">Direct to class</span>
+                <span class="eyebrow">Experiment 1 of 3</span>
             </div>
+            <div class="gi" style="grid-column:1 / span 5;display:flex;flex-direction:column;gap:20px">
+                <div class="callout callout-fill"><span class="callout-label callout-label-muted">Problem statement</span><span class="callout-body">“When I finish registration and onboarding, I have to search for the course I need, which takes too long to understand Platzi’s offer.”</span></div>
+                <div class="callout callout-border"><span class="callout-label callout-label-growth">Hypothesis</span><span class="callout-body">If we motivate students to watch a class immediately after onboarding, we will increase WAS.</span></div>
+            </div>
+            <div class="gi media-white media-white-bordered" style="grid-column:7 / span 6"><img src="../Images/onboarding-direct-to-class.png" alt="Direct-to-class onboarding flow"></div>
+            <div class="finding-grid">
+                <div class="finding"><span class="exp-title fluid finding-title">Short-term success only</span><span class="body-md fluid">WAS rose in week one, but by week two students were inactive again.</span></div>
+                <div class="finding"><span class="exp-title fluid finding-title">Low engagement depth</span><span class="body-md fluid">Students rarely watched more than two classes of the recommended course.</span></div>
+                <div class="finding"><span class="exp-title fluid finding-title">Unexpected behavior</span><span class="body-md fluid">Some were confused to land in a class right after registering.</span></div>
+            </div>
+        </section>
+
+        <section class="grid12 iteration" style="margin-top:0;padding-top:144px">
+            <div class="iteration-head">
+                <span class="h2-next fluid" style="--fmin:36;--fmax:72">Search-first onboarding</span>
+                <span class="eyebrow">Experiment 2 of 3</span>
+            </div>
+            <div class="gi" style="grid-column:1 / span 5;display:flex;flex-direction:column;gap:20px">
+                <div class="callout callout-fill"><span class="callout-label callout-label-muted">Problem statement</span><span class="callout-body">“The platform suggests themes when I register, but the terminology isn’t clear, so it’s hard to find what I’m actually looking for.”</span></div>
+                <div class="callout callout-border"><span class="callout-label callout-label-growth">Hypothesis</span><span class="callout-body">If students can search for specific content instead of picking from a list, they’ll reach relevant content faster, impacting WAS.</span></div>
+            </div>
+            <div class="gi media-white media-white-bordered" style="grid-column:7 / span 6"><img src="../Images/onboarding-search-interface.png" alt="Search-first onboarding screens"></div>
+            <div class="finding-grid">
+                <div class="finding"><span class="exp-title fluid finding-title">Better initial discovery</span><span class="body-md fluid">More students found content they were interested in at first.</span></div>
+                <div class="finding"><span class="exp-title fluid finding-title">Still not long-term</span><span class="body-md fluid">Motivation didn’t last beyond a couple of classes or one course.</span></div>
+                <div class="finding"><span class="exp-title fluid finding-title">Need for exploration</span><span class="body-md fluid">Students wanted to explore before committing to a course.</span></div>
+            </div>
+        </section>
+
+        <section class="grid12 iteration iteration-dark" style="margin-top:144px">
+            <div class="iteration-head">
+                <span class="h2-next fluid" style="--fmin:36;--fmax:72;display:flex;align-items:center;gap:20px;flex-wrap:wrap">Mission-based onboarding <span class="badge badge-growth badge-lg">Winner</span></span>
+                <span class="eyebrow">Experiment 3 of 3</span>
+            </div>
+            <div class="gi" style="grid-column:1 / span 5;display:flex;flex-direction:column;gap:20px">
+                <div class="callout callout-fill"><span class="callout-label callout-label-muted">Problem statement</span><span class="callout-body">“After starting at Platzi, I lose interest because I don’t find the motivation to study consistently.”</span></div>
+                <div class="callout callout-border"><span class="callout-label callout-label-growth">Hypothesis</span><span class="callout-body">If we create an extended onboarding with missions over 4 weeks, students will stay active in weeks 2 to 5, increasing WAS for those periods.</span></div>
+            </div>
+            <div class="gi media-white" style="grid-column:7 / span 6"><img src="../Images/onboarding-mission-system.png" alt="Mission system: accept missions, track progress, complete"></div>
+            <div class="finding-grid">
+                <div class="finding"><span class="exp-title fluid finding-title">Best results achieved</span><span class="body-md fluid">The strongest outcome of all experiments, study habits built after the first month.</span></div>
+                <div class="finding"><span class="exp-title fluid finding-title">Gamification works</span><span class="body-md fluid">Missions balanced freedom to explore with motivation to study.</span></div>
+                <div class="finding"><span class="exp-title fluid finding-title">Aha moment unlocked</span><span class="body-md fluid">Students said missions helped them discover Platzi’s value in month one.</span></div>
+            </div>
+        </section>
+
+        <section class="learnings">
+            <div class="learnings-head">
+                <span class="eyebrow" style="color:var(--muted)">03 — Key takeaways</span>
+                <h2 class="h2-case fluid">What I learned</h2>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">01</span>
+                <span class="learning-title-cell learning-title fluid">Short-term vs. long-term</span>
+                <span class="learning-body body-lg fluid">Early experiments won quick activation that didn’t last. The winner built habits over weeks.</span>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">02</span>
+                <span class="learning-title-cell learning-title fluid">Balance freedom and guidance</span>
+                <span class="learning-body body-lg fluid">Students need structure (missions) and autonomy (room to explore). Forcing them into content created friction; giving them a reason to engage worked.</span>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">03</span>
+                <span class="learning-title-cell learning-title fluid">Iterate with user feedback</span>
+                <span class="learning-body body-lg fluid">Pairing metrics with interviews revealed the “why” behind results, enabling smarter iteration.</span>
+            </div>
+            <div class="learning-row">
+                <span class="learning-idx">04</span>
+                <span class="learning-title-cell learning-title fluid">Gamification as motivation</span>
+                <span class="learning-body body-lg fluid">Simple missions and badges can provide the external push needed to establish internal habits.</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="next-footer">
+        <a href="cancellation-flow-detail.html" class="next-link">
+            <span class="next-label">Next case study · 07</span>
+            <span class="next-title-row">
+                <span class="h2-next fluid">Voluntary cancellation flow</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0l-5-5m5 5l-5 5" stroke="var(--growth-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+        </a>
+        <div class="next-footer-meta">
+            <span>© 2026 Adriana Urrego</span>
+            <a href="../Index.html">← All work</a>
+            <a href="mailto:aurregom@gmail.com">aurregom@gmail.com</a>
         </div>
-    </section>
-
-    <!-- Experiment 1 -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">03 — Experiment 1</span>
-            <h2>Direct to Class</h2>
-            <p class="section-description">
-                Testing whether immediately directing students to watch a class after registration would increase Weekly Active Students.
-            </p>
-        </div>
-
-        <div class="experiment-flow">
-            <div class="experiment-content">
-                <div class="experiment-box">
-                    <div class="experiment-label">Problem Statement</div>
-                    <p>When I finish registration and onboarding, I have to search for the course or subject I need, which takes too long to understand Platzi's offer.</p>
-                </div>
-
-                <div class="experiment-box">
-                    <div class="experiment-label">Hypothesis</div>
-                    <p>If we motivate students to <strong>watch a class</strong> immediately after onboarding, we will increase WAS.</p>
-                </div>
-                
-            </div>
-
-            <div class="experiment-image-wrapper">
-                <img src="../Images/onboarding-direct-to-class.png" alt="Direct to Class onboarding flow diagram" class="experiment-image">
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0;">Learnings</h3>
-        </div>
-
-        <div class="learnings-grid">
-            <div class="learning-card">
-                <h4>Short-Term Success Only</h4>
-                <p>WAS increased in the first week after registration, but the effect didn't persist. By week two, students became inactive again.</p>
-            </div>
-
-            <div class="learning-card">
-                <h4>Low Engagement Depth</h4>
-                <p>Students didn't watch more than two classes of the recommended course, indicating limited sustained interest.</p>
-            </div>
-
-            <div class="learning-card">
-                <h4>Unexpected Behavior</h4>
-                <p>Some students were confused about why they arrived at a class immediately after registration, indicating a UX mismatch with expectations.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experiment 2 -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">04 — Experiment 2</span>
-            <h2>Search-First Onboarding</h2>
-            <p class="section-description">
-                Testing whether giving students search functionality would help them find relevant content faster and reduce time to value.
-            </p>
-        </div>
-
-        <div class="experiment-flow">
-            <div class="experiment-image-wrapper">
-                <img src="../Images/onboarding-search-interface.png" alt="Search-first onboarding interface" class="experiment-image">
-            </div>
-
-            <div class="experiment-content">
-                <div class="experiment-box">
-                    <div class="experiment-label">Problem Statement</div>
-                    <p>When I register, the platform asks about topics I want to learn and suggests themes, but the terminology isn't clear, making it hard to find what I'm actually looking for.</p>
-                </div>
-
-                <div class="experiment-box">
-                    <div class="experiment-label">Hypothesis</div>
-                    <p>If we give students the option to <strong>search for specific content</strong> instead of selecting from a list, we'll reduce time to value by helping them see relevant content quickly, impacting WAS.</p>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0;">Learnings</h3>
-        </div>
-
-        <div class="learnings-grid">
-            <div class="learning-card">
-                <h4>Better Initial Discovery</h4>
-                <p>More students found content they were interested in initially, showing the search approach had merit.</p>
-            </div>
-
-            <div class="learning-card">
-                <h4>Still Not Long-Term</h4>
-                <p>The solution didn't create lasting motivation beyond a couple of classes or one course.</p>
-            </div>
-
-            <div class="learning-card">
-                <h4>Need for Exploration</h4>
-                <p>Taking students directly to a class wasn't expected behavior. Students wanted to explore content before committing to start a course.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experiment 3 -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">05 — Experiment 3</span>
-            <h2>Mission-Based Onboarding (Winner)</h2>
-            <p class="section-description">
-                Testing whether gamified missions over 4 weeks would create sustained engagement and help students build lasting study habits.
-            </p>
-        </div>
-
-        <div class="experiment-flow">
-            <div class="experiment-content">
-                <div class="experiment-box">
-                    <div class="experiment-label">Problem Statement</div>
-                    <p>After starting at Platzi, I lose interest because I don't find the motivation to study consistently.</p>
-                </div>
-
-                <div class="experiment-box">
-                    <div class="experiment-label">Hypothesis</div>
-                    <p>If we create an <strong>extended onboarding with missions</strong> that students complete over 4 weeks, they'll stay active during weeks 2, 3, 4, and 5, increasing WAS for those periods.</p>
-                </div>
-                
-            </div>
-
-            <div class="experiment-image-wrapper">
-                <img src="../Images/onboarding-mission-system.png" alt="Mission-based gamification system" class="experiment-image">
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0;">Learnings</h3>
-        </div>
-
-        <div class="learnings-grid">
-            <div class="learning-card">
-                <h4>Best Results Achieved</h4>
-                <p>Of all experiments, this achieved the strongest outcomes, successfully building study habits after the first month.</p>
-            </div>
-
-            <div class="learning-card">
-                <h4>Gamification Works</h4>
-                <p>The missions element was engaging and fun, striking the perfect balance between exploration freedom and study motivation.</p>
-            </div>
-
-            <div class="learning-card">
-                <h4>Aha Moment Unlock</h4>
-                <p>Students confirmed the gamified missions helped them discover Platzi's value and develop consistent product habits during month one.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">06 — Impact</span>
-            <h2>Significant Growth Achievement</h2>
-            <p class="section-description">
-                The mission-based onboarding experiment delivered measurable improvements in student activation and retention.
-            </p>
-        </div>
-
-        <div class="results-grid">
-            <div class="stat-card">
-                <div class="stat-number">2X</div>
-                <div class="stat-label">Growth in Weekly Active Students</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Learnings Section -->
-    <section class="content-section">
-        <div class="section-header">
-            <span class="section-label">07 — Key Takeaways</span>
-            <h2>What I Learned</h2>
-        </div>
-
-        <div class="card-grid">
-            <div class="info-card">
-                <h3>Short-Term vs. Long-Term Thinking</h3>
-                <p>Early experiments showed quick wins that didn't persist. The winning solution focused on building sustainable habits over weeks, not just immediate activation.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Balance Freedom and Guidance</h3>
-                <p>Students need structure (missions) but also autonomy (exploration space). Forcing them directly into content created friction; giving them a reason to engage worked better.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Iterate with User Feedback</h3>
-                <p>Combining quantitative metrics with qualitative interviews revealed the "why" behind results, enabling smarter iteration.</p>
-            </div>
-
-            <div class="info-card">
-                <h3>Gamification as Motivation</h3>
-                <p>Simple gamification elements (missions, badges) can provide the external motivation needed to establish internal habits.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <a href="cancellation-flow-detail.html" class="next-project">Next product →</a>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

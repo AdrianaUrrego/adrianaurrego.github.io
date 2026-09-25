@@ -16,7 +16,7 @@
     <link rel="icon" type="image.png" href="Images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -25,349 +25,215 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header/Navigation -->
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">Adriana Urrego</a>
-            <nav class="nav">
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#work" class="nav-link">Work</a></li>
-                    <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="site-header">
+        <a href="#top" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span class="brand-name">Adriana Urrego</span>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="primary-nav" id="nav-menu" aria-label="Primary">
+            <a href="#ai" class="nav-link">AI products</a>
+            <a href="#growth" class="nav-link">Growth</a>
+            <a href="#teaching" class="nav-link">Teaching</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="btn btn-solid nav-link">Get in touch</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    I build <span class="text-muted">AI-powered products</span> that drive growth and transform <span class="text-muted">user experiences</span>.
-                </h1>
-                <p class="hero-description">
-                    Product Manager specializing in AI/ML integration and growth optimization. 7+ years shipping products that balance user needs with business impact.
-                </p>
-                <!--a href="#work" class="btn btn-primary">
-                    View Selected Work
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 3L8 13M8 13L13 8M8 13L3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a-->
-            </div>
-        </div>
-    </section>
-
-    <!-- Selected Work Section -->
-    <section id="work" class="selected-work">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Products</h2>
-            </div>
-
-            <div class="work-grid">
-                <!-- Work Card 1 -->
-                <article class="work-card">
-                    <a href="case-studies/platzi-learn-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Platzi Learn V1</h3>
-                            <span class="work-card-label">AI Course Generator</span>
-                        </div>
-                        <p class="work-card-description">
-                            Transforms company docs into structured courses with AI-narrated lessons and assessments.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
+    <main>
+        <section id="top" class="grid12 hero">
+            <h1 class="hero-h1 h1-home fluid">I ship <mark class="hl-ai">AI&nbsp;products</mark> and the <span class="hl-growth">growth experiments</span> that make them stick.</h1>
+            <div class="hero-side">
+                <p class="lead fluid">Product Manager specializing in AI/ML integration and growth optimization. 7+ years shipping products that balance user needs with business impact.</p>
+                <div class="hero-actions">
+                    <a href="#ai" class="btn btn-solid">See the work
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10m0 0l5-5m-5 5L3 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
-                </article>
-
-                <!-- Work Card 2 -->
-                <article class="work-card">
-                    <a href="case-studies/placement-test-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Placement Test</h3>
-                            <span class="work-card-label">English Proficiency Test</span>
-                        </div>
-                        <p class="work-card-description">
-                            AI-powered adaptive test evaluating English skills with personalized learning recommendations.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </article>
-
-                <!-- Work Card 3 -->
-                <article class="work-card">
-                    <a href="case-studies/search-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Search</h3>
-                            <span class="work-card-label">AI-Powered Course Search</span>
-                        </div>
-                        <p class="work-card-description">
-                            Personalized search using vector databases to surface the most relevant learning content.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </article>
-
-                <!-- Work Card 4 -->
-                <article class="work-card">
-                    <a href="case-studies/exams-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Exams</h3>
-                            <span class="work-card-label">AI Assessment System</span>
-                        </div>
-                        <p class="work-card-description">
-                            Auto-generates question banks and evaluates open responses with real-time gamified feedback.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </article>
-
-                <!-- Work Card 5 -->
-                <article class="work-card">
-                    <a href="case-studies/explainer-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Explainer V1 and V2</h3>
-                            <span class="work-card-label">Instant Student Support</span>
-                        </div>
-                        <p class="work-card-description">
-                            AI assistant providing immediate answers to student questions within the learning interface.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </article>
-
-                <!-- Work Card 6 -->
-                <article class="work-card">
-                    <a href="case-studies/onboarding-experiments-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Onboarding Experiments</h3>
-                            <span class="work-card-label">Growth Initiative</span>
-                        </div>
-                        <p class="work-card-description">
-                            Series of experiments optimizing the onboarding experience to increase Weekly Active Students by 2X.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </article>
-
-                <!-- Work Card 7 -->
-                <article class="work-card">
-                    <a href="case-studies/cancellation-flow-detail.html" class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Voluntary Cancellation Flow</h3>
-                            <span class="work-card-label">Growth Initiative</span>
-                        </div>
-                        <p class="work-card-description">
-                            Reduced churn by 20% through strategic UX improvements balancing business needs with user trust.
-                        </p>
-                        <span class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </article>
-
-                <!-- Work Card 8 -->
-                <!--article class="work-card">
-                    <div class="work-card-content">
-                        <div class="work-card-header">
-                            <h3 class="work-card-title">Learning Path Maker</h3>
-                            <span class="work-card-label">Custom Learning Paths</span>
-                        </div>
-                        <p class="work-card-description">
-                            AI-powered tool creating personalized course routes based on company training objectives.
-                        </p>
-                        <a href="#" class="work-card-link">
-                            View detail
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article-->
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Classes & Talks Section -->
-    <section id="teaching" class="teaching">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Live Classes & Blogposts</h2>
-                    <p class="section-description">
-                        I believe that giving back to the community is a valuable way to help others learn from both my failures and successes, while also providing me with opportunities for continued growth. These are some resources I've created as part of this learning-by-teaching journey.
-                    </p>
-                <!--/div>
-                <a href="#" class="btn btn-secondary">View all resources</a-->
-            </div>
-
-            <div class="teaching-grid">
-                <!-- Resource Card 1 -->
-                <a href="https://www.youtube.com/watch?v=v6tk0CxaVU8&t=1s" target="_blank" class="resource-card" aria-label="View resource">
-                    <div class="resource-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="resource-card-content">
-                        <h3 class="resource-card-title">Mathematical foundations of artificial intelligence</h3>
-                        <p class="resource-card-description">
-                            We break down step by step how language models process information, predict words, and learn with each iteration.
-                        </p>
-                    </div>
-                </a>
-
-                <!-- Resource Card 2 -->
-                <a href="https://platzi.com/blog/ai-empezar-primer-proyecto-con-inteligencia-artificial/" target="_blank" class="resource-card" aria-label="View resource">
-                    <div class="resource-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M9 9L15 15M15 9L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="resource-card-content">
-                        <h3 class="resource-card-title">How to start your first Artificial Intelligence project</h3>
-                        <p class="resource-card-description">
-                            A practical guide to becoming AI Native and creating products with AI.
-                        </p>
-                    </div>
-                </a>
-
-                <!-- Resource Card 3 -->
-                <a href="https://platzi.com/blog/deepseek-r1-el-llm-open-source-mas-potente-del-mercado/" target="_blank" class="resource-card" aria-label="View resource">
-                    <div class="resource-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="resource-card-content">
-                        <h3 class="resource-card-title">Why DeepSeek R1 is better than GPT-o1</h3>
-                        <p class="resource-card-description">
-                            What DeepSeek R1 did to beat ChatGPT and how it was trained to become the most powerful open-source LLM on the market.
-                        </p>
-                    </div>
-                </a>
-
-                <!-- Resource Card 4 -->
-                <a href="https://adrianaurrego.substack.com/" target="_blank" class="resource-card" aria-label="View resource">
-                    <div class="resource-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="resource-card-content">
-                        <h3 class="resource-card-title">The Non-Traditional Path</h3>
-                        <p class="resource-card-description">
-                            My personal blog where I frequently write about Product Management and lifestyle.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="about-description">
-                        <p>
-                            My path to product management wasn't traditional. As an economist breaking into tech, I had to earn my stripes through dedication and continuous learning. I spent 5 years as a Project Manager leading hardware-software integration projects before pivoting to Product Management, where I could shape product vision and strategy.
-                        </p>
-                        <p>
-                            Over a decade in tech has given me the technical depth to work seamlessly with engineering teams. I specialize in 0-to-1 launches and scaling growth products—falling in love with problems, experimenting rapidly, and shipping value incrementally.
-                        </p>
-                        <p>
-                            Based in Vancouver for over a year now. When I'm not analyzing user flows, you'll find me hiking, beach hopping, exploring coffee shops, or at dance class.
-                        </p>
-                    </div>
+                    <a href="mailto:aurregom@gmail.com" class="btn btn-ghost">Email me</a>
                 </div>
-                <div class="about-image">
-                    <div class="profile-photo">
-                        <img src="./Images/Hero.jpeg" alt="Profile Photo" />
-                    </div>
+            </div>
+        </section>
+
+        <section id="ai" class="ai-section">
+            <div class="grid12 ai-head rule-top-lg">
+                <h2 class="h2-home fluid section-head-sq" style="grid-column: 1 / span 7"><span class="sq sq-ai" aria-hidden="true"></span>AI products</h2>
+            </div>
+
+            <a href="case-studies/platzi-learn-detail.html" class="ai-feature">
+                <span class="stage ai-feature-media">
+                    <img src="Images/platzi-learn-lesson-editor.png" alt="Platzi Learn lesson player with AI-narrated slides">
+                </span>
+                <span class="ai-feature-body">
+                    <span class="eyebrow" style="color:var(--muted)">01 — AI course generator</span>
+                    <span class="ai-feature-title fluid">Platzi Learn V1</span>
+                    <span class="body-lg fluid" style="color:var(--text-2)">Transforms company docs into structured courses with AI-narrated lessons and assessments.</span>
+                    <span class="ai-feature-link">Read the case study
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </span>
+            </a>
+
+            <div class="ai-grid">
+                <a href="case-studies/placement-test-detail.html" class="ai-card">
+                    <span class="stage"><img src="Images/placement-test-results.png" alt="Placement Test results with recommended courses"></span>
+                    <span class="ai-card-meta">
+                        <span class="eyebrow" style="color:var(--muted)">02</span>
+                        <span class="ai-card-title fluid">Placement Test</span>
+                        <span></span>
+                        <span class="body-lg fluid">AI-powered adaptive test evaluating English skills with personalized learning recommendations.</span>
+                    </span>
+                </a>
+                <a href="case-studies/search-detail.html" class="ai-card">
+                    <span class="stage"><img src="Images/search-ranking.png" alt="Search results ranked for the query “inglés”" style="object-position: center top"></span>
+                    <span class="ai-card-meta">
+                        <span class="eyebrow" style="color:var(--muted)">03</span>
+                        <span class="ai-card-title fluid">Search</span>
+                        <span></span>
+                        <span class="body-lg fluid">Personalized search using vector databases to surface the most relevant learning content.</span>
+                    </span>
+                </a>
+                <a href="case-studies/exams-detail.html" class="ai-card">
+                    <span class="stage stage-center"><img src="Images/exams-grading.png" alt="Exams grading an open answer on mobile"></span>
+                    <span class="ai-card-meta">
+                        <span class="eyebrow" style="color:var(--muted)">04</span>
+                        <span class="ai-card-title fluid">Exams</span>
+                        <span></span>
+                        <span class="body-lg fluid">Auto-generates question banks and evaluates open responses with real-time gamified feedback.</span>
+                    </span>
+                </a>
+                <a href="case-studies/explainer-detail.html" class="ai-card">
+                    <span class="stage"><img src="Images/ai-answer-engine.jpg" alt="Explainer answering a student question inside a lesson" style="object-position: center"></span>
+                    <span class="ai-card-meta">
+                        <span class="eyebrow" style="color:var(--muted)">05</span>
+                        <span class="ai-card-title fluid">Explainer V1 and V2</span>
+                        <span></span>
+                        <span class="body-lg fluid">AI assistant providing immediate answers to student questions within the learning interface.</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section id="growth">
+            <div class="grid12 growth-head rule-top-lg">
+                <h2 class="h2-home fluid section-head-sq" style="grid-column: 1 / span 7"><span class="sq sq-growth" aria-hidden="true"></span>Growth</h2>
+            </div>
+
+            <a href="case-studies/onboarding-experiments-detail.html" class="growth-feature">
+                <span class="growth-feature-body">
+                    <span class="eyebrow" style="color:var(--muted-dark)">06 — Activation</span>
+                    <span class="num-hero fluid" style="--fmin:168;--fmax:288;color:var(--growth-dark);margin-left:-12px">2×</span>
+                    <span class="eyebrow" style="color:var(--muted-dark)">Weekly active students</span>
+                    <span class="growth-card-title fluid" style="padding-top:12px">Onboarding experiments</span>
+                    <span class="body-lg fluid" style="color:var(--text-2-dark)">A series of experiments optimizing the onboarding experience to increase Weekly Active Students by 2X.</span>
+                    <span class="ai-feature-link">Read the case study
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </span>
+                <span class="growth-feature-media">
+                    <img class="phone-shot" src="Images/onboarding-mission-in-progress.jpg" alt="Onboarding mission, in progress">
+                    <img class="phone-shot" src="Images/onboarding-mission-complete.jpg" alt="Onboarding mission, completed">
+                    <span class="caption-row"><span class="idx" style="color:var(--growth-dark)">1</span><span>A three-step mission: take a class, share your goal, study an hour a week.</span></span>
+                    <span class="caption-row"><span class="idx" style="color:var(--growth-dark)">2</span><span>Mission complete — the learner’s goal stays pinned to their home screen.</span></span>
+                </span>
+            </a>
+
+            <a href="case-studies/cancellation-flow-detail.html" class="grid12 cancel-feature">
+                <span class="cancel-stat-row gi">
+                    <span class="num-hero fluid" style="--fmin:136;--fmax:360;color:var(--growth);margin-left:-16px">−20%</span>
+                    <span class="cancel-eyebrow-stack">
+                        <span class="eyebrow" style="color:var(--muted)">07 — Retention</span>
+                        <span class="eyebrow" style="color:var(--muted)">Voluntary churn</span>
+                    </span>
+                </span>
+                <span class="cancel-body gi">
+                    <span class="growth-card-title fluid" style="padding-top:18px">Voluntary cancellation flow</span>
+                    <span class="body-lg fluid" style="color:var(--text-2)">Reduced churn by 20% through strategic UX improvements balancing business needs with user trust.</span>
+                    <span class="ai-feature-link">Read the case study
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </span>
+                <span class="cancel-media gi">
+                    <img src="Images/cancellation-friction-1.png" alt="Subscription settings screen">
+                    <img src="Images/cancellation-transparency-2.png" alt="Updated subscription management with pause option">
+                </span>
+                <span class="cancel-captions gi">
+                    <span class="caption-row"><span class="idx" style="color:var(--growth)">1</span><span>Subscription settings: plan, next payment and saved card in one place.</span></span>
+                    <span class="caption-row"><span class="idx" style="color:var(--growth)">2</span><span>Plan benefits stated up front, with a pause option next to cancel.</span></span>
+                </span>
+            </a>
+        </section>
+
+        <section id="teaching" class="teaching-section">
+            <div class="grid12 teaching-head rule-top-lg">
+                <h2 class="h2-home fluid" style="grid-column: 1 / span 8">Learning by teaching</h2>
+                <p class="lead fluid">Giving back helps others learn from my failures and successes, and keeps me growing too.</p>
+            </div>
+            <div class="teaching-list">
+                <a href="https://www.youtube.com/watch?v=v6tk0CxaVU8&t=1s" target="_blank" rel="noopener" class="teach-row">
+                    <span class="teach-type">
+                        <span class="teach-play" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 18 18"><path d="M5 3v12l10-6z" fill="var(--paper)"/></svg></span>
+                        Live class
+                    </span>
+                    <span class="teach-title-cell teach-title fluid">Mathematical foundations of artificial intelligence</span>
+                    <span class="teach-desc">We break down step by step how language models process information, predict words, and learn with each iteration.</span>
+                    <span class="teach-dest">YouTube ↗</span>
+                </a>
+                <a href="https://platzi.com/blog/ai-empezar-primer-proyecto-con-inteligencia-artificial/" target="_blank" rel="noopener" class="teach-row">
+                    <span class="teach-type teach-type-muted">Article</span>
+                    <span class="teach-title-cell teach-title fluid">How to start your first Artificial Intelligence project</span>
+                    <span class="teach-desc">A practical guide to becoming AI Native and creating products with AI.</span>
+                    <span class="teach-dest">Platzi ↗</span>
+                </a>
+                <a href="https://platzi.com/blog/deepseek-r1-el-llm-open-source-mas-potente-del-mercado/" target="_blank" rel="noopener" class="teach-row">
+                    <span class="teach-type teach-type-muted">Article</span>
+                    <span class="teach-title-cell teach-title fluid">Why DeepSeek R1 is better than GPT-o1</span>
+                    <span class="teach-desc">What DeepSeek R1 did to beat ChatGPT and how it was trained to become the most powerful open-source LLM on the market.</span>
+                    <span class="teach-dest">Platzi ↗</span>
+                </a>
+                <a href="https://adrianaurrego.substack.com/" target="_blank" rel="noopener" class="teach-row">
+                    <span class="teach-type teach-type-muted">Newsletter</span>
+                    <span class="teach-title-cell teach-title fluid">The Non-Traditional Path</span>
+                    <span class="teach-desc">My personal blog where I frequently write about Product Management and lifestyle.</span>
+                    <span class="teach-dest">Substack ↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="grid12 about-section rule-top-lg">
+            <img class="about-photo" src="Images/Hero.jpeg" alt="Portrait of Adriana Urrego">
+            <div class="about-body">
+                <h2 class="h2-about fluid">Economist. Project manager. Product.</h2>
+                <p class="lead fluid">My path to product management wasn’t traditional. As an economist breaking into tech, I earned my stripes through dedication and continuous learning. 5 years as a Project Manager leading hardware-software integration before pivoting to product.</p>
+                <p class="lead fluid">Over a decade in tech gives me the technical depth to work seamlessly with engineering. I specialize in 0-to-1 launches and scaling growth products: falling in love with problems, experimenting rapidly, shipping value incrementally.</p>
+                <p class="lead fluid">Based in Vancouver. Off the clock: hiking, beach hopping, coffee shops, dance class.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="grid12 footer-top">
+            <h2 class="h2-footer fluid footer-head">Got a product that needs to stick?</h2>
+            <div class="footer-links">
+                <p class="lead fluid" style="color:var(--text-2-dark)">Always open to new opportunities, product philosophy, or a chat about the future of tech.</p>
+                <div class="contact-list">
+                    <a href="mailto:aurregom@gmail.com" class="contact-row">
+                        <span class="contact-label-group"><span class="contact-label">Email</span><span class="contact-value">aurregom@gmail.com</span></span>
+                        <span class="contact-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adriurrego/" target="_blank" rel="noopener" class="contact-row">
+                        <span class="contact-label-group"><span class="contact-label">LinkedIn</span><span class="contact-value">in/adriurrego</span></span>
+                        <span class="contact-arrow" aria-hidden="true">↗</span>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Contact/Footer Section -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <h2 class="footer-title">Let's build something meaningful.</h2>
-                    <p class="footer-description">
-                        I'm always open to discussing new opportunities, product philosophy, or just chatting about the future of tech.
-                    </p>
-                </div>
-                <div class="footer-contact">
-                    <a href="mailto:aurregom@gmail.com" class="contact-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 4L10 11L17 4M3 4H17M3 4V16H17V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        aurregom@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/adriurrego/" target="_blank" class="contact-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H16C17.1 18 18 17.1 18 16V4C18 2.9 17.1 2 16 2ZM7 15H5V8H7V15ZM6 7C5.4 7 5 6.6 5 6C5 5.4 5.4 5 6 5C6.6 5 7 5.4 7 6C7 6.6 6.6 7 6 7ZM15 15H13V11.5C13 10.7 12.3 10 11.5 10C10.7 10 10 10.7 10 11.5V15H8V8H10V9C10.5 8.4 11.2 8 12 8C13.7 8 15 9.3 15 11V15Z" fill="currentColor"/>
-                        </svg>
-                        linkedin.com/in/adriurrego/
-                    </a>                    
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Designed and developed with Claude Code</p>
-            </div>
+        <div class="footer-meta">
+            <span>© 2026 Adriana Urrego</span>
+            <span>Vancouver, BC</span>
+            <a href="#top">Back to top ↑</a>
         </div>
     </footer>
 

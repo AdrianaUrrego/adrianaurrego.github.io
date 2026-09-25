@@ -9,23 +9,25 @@ This is a static portfolio website for a Product Manager specializing in AI/ML p
 ## Architecture
 
 ### Core Files
-- **Index.html**: Main landing page with hero, work grid, teaching section, about, and contact
+- **Index.html**: Main landing page — hero, AI products, Growth band, teaching, about, contact footer
 - **case-studies/**: Directory containing all case study detail pages
-  - Individual case study pages (`*-detail.html`, plus `wealthsimple.html`)
-  - Each has inline styles in `<style>` tags for page-specific design
-  - Navigation with back link to `../Index.html`
+  - 7 redesigned pages (`*-detail.html`) share one template built from `css/case-study.css`, no per-page inline `<style>` blocks
+  - `wealthsimple.html` is a pre-redesign page kept as-is (out of scope, not on the header/footer nav chain)
+  - Navigation with back link to `../Index.html`; each page links to the next in sequence 01→07, and the last links back to the first and to home
   - Use relative paths for assets: `../Images/`, `../css/`, `../js/`
-  - Follow same section structure: hero, overview, challenge, approach, impact, learnings
-- **css/estilos.css**: Main stylesheet using CSS custom properties (variables) in `:root`
-- **css/estilos_header.css**: Header-specific styles (if applicable)
-- **js/main.js**: Vanilla JS for navigation, smooth scrolling, mobile menu, and scroll animations
+  - Section order: hero → impact → problem → solution/approach → how-it-works (or experiments/iterations) → key learnings → next-case footer
+- **css/estilos.css**: Design tokens (`:root`), reset, base styles, fluid type utilities, 12-col grid helpers, header/nav, buttons, and every home-page-only component
+- **css/case-study.css**: Loads after `estilos.css` on case study pages only — hero, impact band, problem cards, feature grid, step rows, callouts, badges, key learnings, next-case footer, and the growth-page-specific iteration/experiment blocks
+- **js/main.js**: Vanilla JS for the mobile nav toggle, smooth scrolling with header offset, active-link-on-scroll, and an optional scroll fade-in (disabled under `prefers-reduced-motion`)
 
-### Design System
-The site uses a centralized design system defined in CSS custom properties:
-- **Colors**: `--color-primary`, `--color-text`, `--color-text-muted`, `--color-background`, `--color-accent`
-- **Typography**: `--font-family` (Inter), font size scale from `--font-size-sm` to `--font-size-7xl`
-- **Spacing**: 8px grid system with `--spacing-xs` through `--spacing-4xl`
-- **Layout**: `--container-max-width: 1200px`, `--border-radius`, `--transition-base`
+### Design System — "2026 redesign"
+Warm off-white paper, near-black ink, big tightly-set display type. Lime = **AI products** work, magenta = **Growth** work — these two accent colors carry that fixed meaning everywhere and are never used decoratively. Tokens live in `css/estilos.css` `:root`:
+- **Surfaces**: `--paper` `#F3F0E8`, `--ink` `#15130F`, `--panel-dark` `#1E1C17` (screenshot stage), `--callout` `#E7E2D6` / `--callout-dark` `#2A2721`
+- **Text**: `--text-2` / `--muted` on paper, `--text-2-dark` / `--muted-dark` on ink
+- **Accents**: `--ai` `#88EE11`, `--growth` `#C8175F` (on paper), `--growth-dark` `#FF4F93` (on ink)
+- **Type**: `--font-display` = Bricolage Grotesque, `--font-body` = Hanken Grotesk. Sizes scale with `clamp()` between a 390px and 1440px reference via the `.fluid` class plus role classes (`.h1-home`, `.h1-case`, `.h2-case`, `.step-num`, `.num`, etc.) — see `css/estilos.css` for the full scale
+- **Layout**: 12-col grid (`.grid12`), `24px` gutter, `1280px` max content width, `80px`/`20px` side margin. Grid placement is set with inline `grid-column` per element (mirrors `redesign-handoff/reference/*.html`, the approved visual comps), stacked to one column via the `.gi` class at `≤640px` and via `display:flex` container overrides at `≤767px`
+- **Big numerals** (stats, metrics): use the `.num` / `.num-hero` classes with `--fmin` / `--fmax` set inline (unitless px) to match each instance's own desktop size — there's no single fixed scale for these, they vary per section
 
 ### JavaScript Features
 All in `js/main.js`:
@@ -38,18 +40,18 @@ All in `js/main.js`:
 ### HTML Structure Pattern
 All pages follow this pattern:
 1. Google Tag Manager (GTM-TVDMFNM) in `<head>` and after `<body>`
-2. Header/Navigation with logo and menu
-3. Semantic HTML5 sections with IDs for navigation
-4. Responsive images in `Images/` directory
-5. Footer with contact links
+2. `<header class="site-header">` with the logo mark, brand name, nav links and a "Get in touch" pill; `#nav-toggle` / `#nav-menu` for the mobile hamburger overlay
+3. Semantic HTML5 `<main>` with `<section>`s (home page sections keep their `id`s for anchor nav)
+4. Images from `Images/` (or `../Images/` inside `case-studies/`)
+5. Footer with contact links (`<footer id="contact">` on the home page, `<footer class="next-footer">` on case studies)
 
 ### Case Study Pages
-Detail pages (`*-detail.html`) have inline styles and follow this structure:
-- Fixed navigation with back link
-- Hero section with title and description
-- Overview cards (role, timeline, tools, team)
-- Main content sections (challenge, approach, impact, learnings)
-- Footer
+Detail pages (`*-detail.html`, except `wealthsimple.html`) share one template (`css/case-study.css`, no inline `<style>` blocks) and follow this structure:
+- `case-hero`: eyebrow (`AI products` or `Growth` · N of 07), H1, lead paragraph, Company/Role/Product (or Metric) meta list
+- `impact-band`: dark full-bleed stat block (or `impact-on-paper` / `metric-strip` on the two Growth pages)
+- `case-section` × 2–3: Problem (`problem-grid`, A/B/C cards), Solution (`feature-grid`), and either `steps` (How it works) or, on the Growth pages, `iteration` blocks with `callout`s and `finding-grid`s
+- `learnings`: indexed key-learnings rows
+- `next-footer`: link to the next case study in the 01→07 chain (Cancellation links back to Platzi Learn and to `../Index.html`)
 
 ## Development Workflow
 
@@ -71,13 +73,14 @@ php -S localhost:8000
 ```
 
 ### Adding New Case Studies
-1. Create new `[project-name]-detail.html` file in the `case-studies/` directory following the pattern of existing detail pages
+1. Copy `case-studies/platzi-learn-detail.html` as the template (it's the most complete example of the shared components) and rebuild its content
 2. Use relative paths in the new file:
    - Back links: `href="../Index.html"`
    - Images: `src="../Images/[filename]"`
    - Favicon: `href="../Images/favicon.png"`
-3. Add work card to Index.html in the `.work-grid` section
-4. Link the card using `href="case-studies/[project-name]-detail.html"`
+   - Stylesheets: `../css/estilos.css` and `../css/case-study.css`
+3. Add a card to `Index.html`'s `#ai` (`.ai-feature`/`.ai-card`) or `#growth` (`.growth-feature`/`.cancel-feature`) section, linking to `case-studies/[project-name]-detail.html`
+4. Update the `next-footer` link on the *previous* last page in the chain, and this page's own `next-footer` link
 5. Ensure images are added to `Images/` directory
 
 ### Git Workflow
@@ -96,20 +99,20 @@ The site auto-deploys via GitHub Pages when changes are pushed to `master`. No b
   - Exception: `wealthsimple.html` (no `-detail` suffix)
 - Case study pages: stored in `case-studies/` directory
 - CSS files: lowercase with underscores (`estilos_header.css`)
-- Images: PascalCase or descriptive names (`Hero.jpeg`, `Favicon.PNG`)
+- Images: PascalCase or descriptive names (`Hero.jpeg`, `favicon.png`)
 - Main entry point is capitalized: `Index.html`
 
 ### Code Style
-- **HTML**: Semantic elements, proper indentation (4 spaces), descriptive class names
-- **CSS**: BEM-like naming (`.work-card`, `.work-card-title`), mobile-first responsive design
-- **JavaScript**: ES6+ syntax, descriptive variable names, event delegation where appropriate
-- **Comments**: Sections marked with comment headers in CSS
+- **HTML**: Semantic elements, 4-space indentation, descriptive class names; grid placement (`grid-column`) is set with inline `style` per element rather than one-off utility classes, matching the approved design comps
+- **CSS**: BEM-ish naming (`.ai-card`, `.ai-card-title`, `.step-media`), design-token-driven (no hardcoded colors/sizes outside `:root` and the fluid-type classes), mobile-last overrides in `@media` blocks
+- **JavaScript**: ES6+ syntax, descriptive variable names, checks `prefers-reduced-motion` before animating
+- **Comments**: Section header comments in CSS (`/* ---- Name ---- */`)
 
 ### Responsive Breakpoints
-Defined in CSS, typically:
-- Mobile: < 768px
-- Tablet: 768px - 991px
-- Desktop: > 991px
+Defined in CSS (`css/estilos.css`, `css/case-study.css`):
+- `≤1024px`: layout gets cramped (no dedicated rules yet beyond fluid type shrinking)
+- `≤767px`: components stack to a single column (`display:flex;flex-direction:column` overrides)
+- `≤640px`: mobile side margins (`--pad: 20px`) and forced grid stacking (`.gi{grid-column:1/-1 !important}`)
 
 ### Analytics
 All pages include Google Tag Manager (ID: GTM-TVDMFNM). Preserve GTM snippets when editing HTML.
@@ -126,9 +129,9 @@ Maintained in footer:
 Edit the CSS custom properties in `css/estilos.css` at the `:root` selector. Changes will cascade throughout the site.
 
 ### Add Navigation Link
-1. Edit header in `Index.html` (and other pages if needed)
-2. Add `<li><a href="#section-id" class="nav-link">Link Text</a></li>`
-3. Ensure corresponding section has matching `id` attribute
+1. Edit `<nav class="primary-nav" id="nav-menu">` in `Index.html`
+2. Add `<a href="#section-id" class="nav-link">Link Text</a>`
+3. Ensure the corresponding `<section>` has a matching `id` attribute
 
 ### Fix Mobile Menu Issues
 Mobile menu logic is in `js/main.js`. The hamburger toggle, menu visibility, and click-outside-to-close are all controlled there.
