@@ -102,6 +102,15 @@ a:hover {
     color: var(--growth);
 }
 
+/* Card-style links wrap a whole block of content (headings, captions,
+   stats); the blanket a:hover rule above would otherwise recolor all of
+   it to magenta on hover since none of it sets its own color. Keep the
+   hover accent for simple text links only. */
+.ai-feature:hover, .ai-card:hover, .growth-feature:hover, .cancel-feature:hover,
+.teach-row:hover, .contact-row:hover {
+    color: inherit;
+}
+
 :focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
@@ -486,6 +495,14 @@ a:hover {
     overflow: hidden;
 }
 .cancel-media img { display: block; width: 100%; height: 520px; object-fit: cover; object-position: top; border-radius: 22px 22px 0 0; border: 1px solid #C9C3B4; border-bottom: 0; }
+
+/* Below 1280px the column these images sit in shrinks with the viewport,
+   but a flat 520px height doesn't, over-cropping them into a narrow
+   sliver. Scale fluidly down to the mobile height (300px, at 640px)
+   instead of jumping straight there at the 767px layout breakpoint. */
+@media (max-width: 1279px) {
+    .cancel-media img { height: clamp(300px, calc(300px + (100vw - 640px) * 0.34375), 520px); }
+}
 .cancel-captions {
     grid-column: 6 / span 7;
     display: grid;
@@ -506,7 +523,7 @@ a:hover {
     .cancel-stat-row { flex-direction: column; align-items: flex-start; gap: 12px; }
     .cancel-eyebrow-stack { text-align: left; padding-bottom: 0; }
     .cancel-media { padding: 24px 20px 0; column-gap: 14px; }
-    .cancel-media img { height: 300px; border-radius: 14px 14px 0 0; }
+    .cancel-media img { border-radius: 14px 14px 0 0; }
     .cancel-captions { column-gap: 14px; margin-top: 0; }
     .phone-shot { border-radius: 16px; }
     .caption-row { grid-template-columns: 18px minmax(0, 1fr); font-size: 13px; }
