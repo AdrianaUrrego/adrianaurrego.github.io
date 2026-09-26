@@ -341,10 +341,9 @@ a:hover {
     align-items: end;
     row-gap: 28px;
 }
-.hero-h1 { grid-column: 1 / span 12; grid-row: 1; }
+.hero-h1 { grid-column: 1 / span 12; }
 .hero-side {
     grid-column: 9 / span 4;
-    grid-row: 1;
     align-self: end;
     display: flex;
     flex-direction: column;
@@ -352,6 +351,13 @@ a:hover {
     padding-bottom: 14px;
 }
 .hero-actions { display: flex; gap: 12px; }
+
+/* Below 1440px the fluid headline shrinks slower than the column it shares
+   with hero-side, so the two overlap; only stack them onto one grid row
+   once there's enough width for that to stay clear of the text. */
+@media (min-width: 1440px) {
+    .hero-h1, .hero-side { grid-row: 1; }
+}
 
 .hl-ai {
     background: linear-gradient(180deg, transparent 14%, var(--ai) 14%);
