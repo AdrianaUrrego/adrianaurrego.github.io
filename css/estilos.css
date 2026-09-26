@@ -45,9 +45,18 @@
     --radius:       4px;
 }
 
+/* Below 1280px --pad would otherwise stay flat at 80px: fine as a fraction
+   of a 1440px desktop, but proportionally heavy on tablet/small-laptop
+   widths where it eats a much bigger share of the viewport. Scale it down
+   fluidly from 80px at 1280px to 20px at 640px instead. */
+@media (max-width: 1279px) {
+    :root {
+        --pad: clamp(20px, calc(20px + (100vw - 640px) * 0.09375), 80px);
+    }
+}
+
 @media (max-width: 640px) {
     :root {
-        --pad: 20px;
         --gutter: 14px;
         --section: 104px;
         --section-lg: 104px;
