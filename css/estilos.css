@@ -507,7 +507,7 @@ a:hover {
     .cancel-eyebrow-stack { text-align: left; padding-bottom: 0; }
     .cancel-media { padding: 24px 20px 0; column-gap: 14px; }
     .cancel-media img { height: 300px; border-radius: 14px 14px 0 0; }
-    .cancel-captions { column-gap: 14px; }
+    .cancel-captions { column-gap: 14px; margin-top: 0; }
     .phone-shot { border-radius: 16px; }
     .caption-row { grid-template-columns: 18px minmax(0, 1fr); font-size: 13px; }
 }
@@ -608,12 +608,15 @@ a:hover {
 .contact-arrow { font-size: 22px; }
 .footer-meta { display: flex; justify-content: space-between; font-size: 14px; font-weight: 500; color: var(--muted-dark); }
 
+@media (max-width: 1279px) {
+    .contact-label-group { flex-direction: column; gap: 4px; }
+    .contact-label { width: auto; }
+    .contact-value { font-size: 24px; }
+}
+
 @media (max-width: 767px) {
     .site-footer { gap: 36px; padding: 88px var(--pad) 28px; }
     .footer-top { display: flex; flex-direction: column; gap: 36px; }
     .footer-head, .footer-links { grid-column: auto; }
-    .contact-label-group { flex-direction: column; gap: 4px; }
-    .contact-label { width: auto; }
-    .contact-value { font-size: 24px; }
     .footer-meta { margin-top: auto; font-size: 13px; }
 }
