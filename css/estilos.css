@@ -341,9 +341,10 @@ a:hover {
     align-items: end;
     row-gap: 28px;
 }
-.hero-h1 { grid-column: 1 / span 12; }
+.hero-h1 { grid-column: 1 / span 12; grid-row: 1; }
 .hero-side {
     grid-column: 9 / span 4;
+    grid-row: 1;
     align-self: end;
     display: flex;
     flex-direction: column;
