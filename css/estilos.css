@@ -368,7 +368,7 @@ a:hover {
 }
 .hl-growth { color: var(--growth); }
 
-@media (max-width: 767px) {
+@media (max-width: 1439px) {
     .hero { flex-direction: column; display: flex; gap: 32px; padding: 64px var(--pad) 104px; }
     .hero-side { grid-column: auto; padding-bottom: 0; }
     .hero-actions { flex-direction: row; }
